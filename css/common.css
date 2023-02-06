@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"),
+    url("../fonts/Pretendard-Bold.woff") format("woff"),
+    url("../fonts/Pretendard-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard Medium"),
+    url("../fonts/Pretendard-Medium.woff") format("woff"),
+    url("../fonts/Pretendard-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"),
+    url("../fonts/Pretendard-Regular.woff") format("woff"),
+    url("../fonts/Pretendard-Regular.woff2") format("woff2");
+}
+body {
+  font-family: pretendard, "sans-serif";
+  font-weight: 400;
+  color: #333;
+}
+
+.s1 {
+  font-size: 3.6458vw;
+}
+
+.s2 {
+  font-size: 2.5vw;
+}
+
+.s3 {
+  font-size: 32px;
+}
+
+.s4 {
+  font-size: 24px;
+}
+
+.s5 {
+  font-size: 16px;
+}
+
+.p-size-100 {
+  font-size: 5.2083vw;
+}
+.p-size-150 {
+  font-size: 7.8125vw;
+}
+
+.p-size-190 {
+  font-size: 9.8958vw;
+}
+
+.p-size-200 {
+  font-size: 10.4166vw;
+}
+
+
+.bold {
+  font-weight: bold;
+}
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ponint-color {
+  color: #0c4da2;
+}
+
+img {
+  width: 100%;
+}
+
+.inner {
+  max-width: 1420px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1420px) {
+  .inner {
+    width: 90.8vw;
+  }
+  :root {
+    /* --fontsize-xlg: 32px;
+    --fontsize-lg: 24px;
+    --fontsize-md: 17px;
+    --fontsize-sm: 16px; */
+  }
+  .banner {
+    height: 40vw;
+  }
+  .banner .title h2 {
+    font-size: 48px;
+  }
+  .banner .locate {
+    bottom: 12%;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --fontsize-xlg: 4vw;
+    --fontsize-lg: 3vw;
+    --fontsize-md: 17px;
+    --fontsize-sm: 14px;
+  }
+  .banner {
+    height: 50vw;
+  }
+  .banner .title h2 {
+    font-size: 32px;
+  }
+  .banner .locate span {
+    margin: 0 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --fontsize-xlg: 4vw;
+    --fontsize-lg: 3vw;
+    --fontsize-md: 17px;
+    --fontsize-sm: 14px;
+  }
+  .banner {
+    height: 60vw;
+  }
+  .banner .title h2 {
+    font-size: 32px;
+  }
+  .banner .locate span {
+    margin: 0 10px;
+  }
+}
+

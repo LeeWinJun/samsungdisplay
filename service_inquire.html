@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문의하기:SAMSUNG DISPLAY</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/service_inquire.css" />
+  </head>
+  <body>
+    <div class="service_form inner">
+      <div class="service_inq_title s2">
+        <h2 class="s2">문의하기</h2>
+        <img src="./images/service_inquire.svg" alt="" />
+      </div>
+      <form action="./php/insert.php" method="post">
+        <input type="hidden" id="type" name="type" />
+        <div class="inq_customer_info">
+          <h4 class="s3">고객정보</h4>
+          <div class="inq_customer_info_f row row-cols-2">
+            <div class="required_mark col flex-grow-1">
+              <label for="username"></label>
+              <i class="fa-solid fa-asterisk"></i>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="성명 ( 10자 이내로 작성해주세요 )"
+                maxlength="10"
+              />
+            </div>
+            <div class="required_mark col flex-grow-1">
+              <label for="phone"></label>
+              <i class="fa-solid fa-asterisk"></i>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="연락처 ( '-' 빼고 입력해주세요. )"
+                maxlength="11"
+              />
+            </div>
+            <div class="required_mark col flex-grow-1">
+              <label for="email"></label>
+              <i class="fa-solid fa-asterisk"></i>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="이메일 ( abc@samsung.com )"
+              />
+            </div>
+            <div class="required_mark_no col flex-grow-1">
+              <label for="company"></label>
+              <input
+                type="text"
+                name="company"
+                id="company"
+                placeholder="회사명"
+              />
+            </div>
+          </div>
+        </div>
+        <hr class="inq_separation1" />
+        <div class="inq_title">
+          <div class="required_mark">
+            <h4 class="s3">제목</h4>
+            <i class="fa-solid fa-asterisk"></i>
+          </div>
+          <div class="input_wrap flex-grow-1">
+            <label for="title"></label>
+            <input
+              name="title"
+              type="text"
+              id="title"
+              placeholder="제목을 입력해 주십시오.( 30자 이내로 입력해주세요. )"
+              maxlength="30"
+            />
+          </div>
+        </div>
+        <div class="inq_content">
+          <div class="required_mark">
+            <h4 class="s3">내용</h4>
+            <i class="fa-solid fa-asterisk"></i>
+          </div>
+          <div class="input_wrap flex-grow-1">
+            <textarea
+              name="content"
+              id="textbox"
+              cols="30"
+              rows="10"
+              placeholder="문의 내용을 입력해 주십시오."
+            ></textarea>
+          </div>
+        </div>
+        <div class="inq_language_tab">
+          <h4 class="s3">국가/언어</h4>
+          <select name="nation_lang" id="nation_lang">
+            <!-- <option value="" disabled selected>선택하세요</option> -->
+            <option value="Austria / German">Austria / German</option>
+            <option value="Belgium / French">Belgium / French</option>
+            <option value="Belgium / Dutch">Belgium / Dutch</option>
+            <option value="Australia / English">Australia / English</option>
+            <option value="Brazil / Portuguese">Brazil / Portuguese</option>
+            <option value="Canada / English">Canada / English</option>
+            <option value="Canada / French">Canada / French</option>
+            <option value="Chile / Spanish">Chile / Spanish</option>
+            <option value="China / Chinese(Simplified)">
+              China / Chinese(Simplified)
+            </option>
+            <option value="Colombia / Spanish">Colombia / Spanish</option>
+            <option value="Czech / Czech">Czech / Czech</option>
+            <option value="Denmark / Danish">Denmark / Danish</option>
+            <option value="Estonia / Estonian">Estonia / Estonian</option>
+            <option value="Finland / Finnish">Finland / Finnish</option>
+            <option value="France / French">France / French</option>
+            <option value="Germany / German">Germany / German</option>
+            <option value="Greece / Greek">Greece / Greek</option>
+            <option value="HongKong / English">HongKong / English</option>
+            <option value="HongKong / Chinese(Traditional)">
+              HongKong / Chinese(Traditional)
+            </option>
+            <option value="Hungary / Hungarian">Hungary / Hungarian</option>
+            <option value="India / English">India / English</option>
+            <option value="Indonesia / Indonesian">
+              Indonesia / Indonesian
+            </option>
+            <option value="Iran / Persian">Iran / Persian</option>
+            <option value="Ireland / English">Ireland / English</option>
+            <option value="Israel / English">Israel / English</option>
+            <option value="Italy / Italian">Italy / Italian</option>
+            <option value="Japan / Japanese">Japan / Japanese</option>
+            <option value="Kazakstan / Russian">Kazakstan / Russian</option>
+            <option value="Korea / Korean" selected>Korea / Korean</option>
+            <option value="Latin / Spanish">Latin / Spanish</option>
+            <option value="Latvia / Latvian">Latvia / Latvian</option>
+            <option value="Lithuania / Lithuanian">
+              Lithuania / Lithuanian
+            </option>
+            <option value="Malaysia / English">Malaysia / English</option>
+            <option value="Mexico / Spanish">Mexico / Spanish</option>
+            <option value="Netherlands / Dutch">Netherlands / Dutch</option>
+            <option value="NewZealand / English">NewZealand / English</option>
+            <option value="Norway / Norwegian">Norway / Norwegian</option>
+            <option value="Peru / Spanish">Peru / Spanish</option>
+            <option value="Philippines / English">Philippines / English</option>
+            <option value="Poland / Polish">Poland / Polish</option>
+            <option value="Portugal / Portuguese">Portugal / Portuguese</option>
+            <option value="Russia / Russian">Russia / Russian</option>
+            <option value="Saudi Arabia / Arabic">Saudi Arabia / Arabic</option>
+            <option value="Saudi Arabia / English">
+              Saudi Arabia / English
+            </option>
+            <option value="Singapore / English">Singapore / English</option>
+            <option value="Slovakia / Slovak">Slovakia / Slovak</option>
+            <option value="South Africa / English">
+              South Africa / English
+            </option>
+            <option value="Spain / Spanish">Spain / Spanish</option>
+            <option value="Switzerland / French">Switzerland / French</option>
+            <option value="Switzerland / German">Switzerland / German</option>
+            <option value="Taiwan / Chinese">Taiwan / Chinese</option>
+            <option value="Thailand / Thai">Thailand / Thai</option>
+            <option value="Turkey / Turkish">Turkey / Turkish</option>
+            <option value="USA / English">USA / English</option>
+            <option value="UAE / English">UAE / English</option>
+            <option value="Ukraine / Ukrainian">Ukraine / Ukrainian</option>
+            <option value="Ukraine / Russian">Ukraine / Russian</option>
+            <option value="United Kingdom / English">
+              United Kingdom / English
+            </option>
+            <option value="Vietnam / Vietnamese">Vietnam / Vietnamese</option>
+          </select>
+        </div>
+        <div class="inq_check">
+          <h4 class="s3">수신동의</h4>
+          <div class="inq_check_news">
+            <input type="checkbox" id="news_chk" name="news_chk" value="news" />
+            <label for="news_chk"> 뉴스룸 뉴스레터 수신 동의</label>
+          </div>
+        </div>
+        <hr />
+        <p class="s5">
+          접수하신 VOC에 대한 답변은 입력하신 E-MAIL 을 통해 확인할 수 있습니다.
+          빠른 시일내 회신드리도록 하겠습니다.
+        </p>
+        <input type="submit" value="VOC 작성 완료" id="submit_btn" />
+      </form>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/service_inquire.js"></script>
+  </body>
+</html>

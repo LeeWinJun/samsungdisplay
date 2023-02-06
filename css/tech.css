@@ -1,0 +1,504 @@
+/* HEADER */
+section {
+  overflow: hidden;
+}
+/* BANNER */
+body {
+  background-color: #050505;
+  /* background-color: black; */
+}
+.banner .inner {
+  height: 100%;
+  position: relative;
+}
+.banner {
+  position: relative;
+  background: url(../img/bg_OLED_DISPLAY.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 550px;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.banner .title_tech {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fafafa;
+  text-align: center;
+}
+.banner h2 {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+.banner h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.banner .page_info {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 17px;
+}
+.banner .page_info span {
+  margin: 0 20px;
+}
+.banner .page_info span:last-child {
+  color: #fafafa;
+}
+
+/* SAMSUNG DISPLAY - KEY WORD SECTION */
+.samsung_display {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 200vh;
+  background: #050505;
+}
+.keyword {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  /* left: 50%; */
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+.keyword p {
+  color: #fff;
+  text-align: center;
+  font-size: 7.5vw; /* 폰트 사이즈 너무 커서 120px로 바꿈 */
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+.keyword p:last-child {
+  margin-bottom: 0;
+}
+
+/* KEY EXPRESSION SECTION with VIDEO */
+.key_expression {
+  position: relative;
+  width: 100%;
+}
+/* .key_expression video {
+  position: fixed;
+  width: 100%;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+} */
+.key_expression img {
+  position: fixed;
+  width: 100vw;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.key_expression div {
+  text-align: justify;
+  margin: 100vh auto;
+}
+.key_expression ul li {
+  display: inline;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #fff;
+  text-align: justify;
+  opacity: 1;
+}
+
+/* section의 공통 사항들*/
+.main_title,
+.sub_title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.description {
+  color: #fff;
+  margin-bottom: 100px;
+  line-height: 1.1;
+}
+.main_title {
+  font-size: 100px;
+}
+.sub_title,
+.description {
+  font-size: 32px;
+}
+
+/* SELF LUMINOUS 자발광 */
+.self_luminous {
+  margin-top: 300px;
+  background: #050505;
+}
+.self_luminous .oled_flex {
+  display: flex;
+  gap: 171px;
+}
+.self_luminous .oled_flex {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+.oled_panner {
+  width: 478px;
+}
+.oled_panner .highlight {
+  color: #fff;
+}
+.oled_title,
+.about_oled {
+  text-align: center;
+  color: #fff;
+}
+.oled_title {
+  font-size: 40px;
+}
+.about_oled {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.oled-layer-list {
+  position: relative;
+  display: block;
+  list-style: none;
+  top: 0;
+  left: 0;
+  height: 440px;
+  margin-bottom: 30px;
+  color: #a9a9a9;
+}
+.oled-layer-item {
+  position: absolute;
+  display: block;
+}
+.oled-layer-item img {
+  margin-bottom: 42px;
+}
+.nth-4 {
+  z-index: 1;
+}
+.nth-3 {
+  left: 2px;
+  /* left: 68px; */
+  z-index: 2;
+}
+.nth-2 {
+  left: 4px;
+  /* left: 136px; */
+  z-index: 3;
+}
+.nth-1 {
+  left: 6px;
+  /* left: 204px; */
+  z-index: 4;
+}
+.oled-layer-list.unfold .oled-layer-item .nth-3 {
+  transform: translateX(66px);
+}
+.oled-layer-list.unfold .oled-layer-item .nth-2 {
+  transform: translateX(132px);
+}
+.oled-layer-list.unfold .oled-layer-item .nth-1 {
+  transform: translateX(198px);
+}
+.layer-name-wrap {
+  margin-top: 40px;
+  transition: opacity 0.8s;
+  color: #a9a9a9;
+}
+.layer-name-list {
+  display: flex;
+  align-content: flex-start;
+  /* flex-flow: column; */
+  height: 80px;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.layer-name-item {
+  min-width: 180px;
+  margin-top: 12px;
+  text-align: left;
+}
+.layer-name {
+  position: relative;
+  padding-left: 18px;
+}
+.layer-name-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.oled_desc {
+  width: 774px;
+  display: flex;
+  align-items: center;
+  color: #a9a9a9;
+  font-size: 32px;
+  line-height: 1.1;
+  text-align: justify;
+}
+.oled_desc .highlight {
+  color: #fff;
+}
+
+/* FLICKER FREE */
+.flicker_free_section {
+  padding-top: 300px;
+  padding-bottom: 300px;
+  background: #050505;
+}
+.flicker_gif {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.flicker img,
+.flicker_free img {
+  width: 100%;
+}
+.flicker figcaption,
+.flicker_free figcaption {
+  text-align: center;
+  color: #fff;
+  bottom: 5%;
+}
+.flicker figcaption p,
+.flicker_free figcaption p {
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+.flicker figcaption span,
+.flicker_free figcaption span {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* DARKMODE */
+.darkmode {
+  position: relative;
+  width: 100%;
+  height: 1450px;
+  background: url(../img/img_darkmode_bg.png) no-repeat center center/cover;
+}
+.darkmode .description {
+  margin-bottom: 200px;
+}
+.darkmode .laptop_wrap {
+  position: absolute;
+  right: -10%;
+  bottom: 12%;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+}
+.darkmode .laptop_wrap .laptop_white {
+  display: block;
+}
+.darkmode .laptop_wrap .laptop_black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  opacity: 1;
+}
+.darkmode-desc-wrap {
+  position: absolute;
+  bottom: 20%;
+  color: #fff;
+}
+.darkmode-desc-box {
+  margin-bottom: 50px;
+}
+.darkmode-desc-box > p {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.darkmode-desc-box > p .small {
+  font-size: 20px;
+}
+.darkmode-desc-group {
+  display: flex;
+  margin-top: 30px;
+}
+.darkmode-desc-text > p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.darkmode-desc-group figure {
+  margin-left: 10px;
+}
+
+/* FOLDERBLE */
+.folderble {
+  background: #050505;
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 500px;
+}
+.folderble .description {
+  margin-bottom: 0;
+}
+.folding-img-list {
+  position: relative;
+  height: 100vh;
+}
+.folding-img-list li {
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+  display: block;
+}
+.folding-img-list li img {
+  width: 100%;
+}
+.folding-img-item.on {
+  opacity: 1;
+}
+
+/* FLEX DEVICE */
+.flex_device_box {
+  background: #050505;
+  position: relative;
+  text-align: center;
+  justify-items: center;
+  align-items: flex-start;
+}
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.flex_list_left ul li p,
+.flex_list_right ul li p {
+  font-size: 190px;
+  font-weight: bold;
+  color: #fff;
+}
+.flex_list_left ul li span,
+.flex_list_right ul li span {
+  font-size: 112px;
+  color: #424242;
+}
+.flex_device_box .flex_typo {
+  font-size: 190px;
+  font-weight: bold;
+  color: #fff;
+  /* top: calc(50%);
+  transform: translateY(-50%); */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* APPLICATION */
+.application {
+  background: #050505;
+  padding-top: 300px;
+}
+.application .title {
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 36px;
+}
+.application a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+.application .app_top,
+.application .app_bottom {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 38px;
+}
+.application .app_top {
+  margin-bottom: 27px;
+}
+.application .big_box {
+  width: 803px;
+  height: 370px;
+  border: 2px solid #898989;
+  border-radius: 10px;
+}
+.application .small_box {
+  width: 588px;
+  height: 370px;
+  border: 2px solid #898989;
+  border-radius: 10px;
+}
+.application .app_name {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  margin-left: 30px;
+  top: 32px;
+  left: 30px;
+}
+.application .readmore {
+  font-size: 14px;
+  color: #fff;
+  margin-left: 30px;
+}
+.application .readmore i {
+  font-size: 12px;
+  margin-left: 10px;
+}
+.application .img_automotive {
+  background: url(../img/automotive.png) no-repeat center center;
+  background-size: 803px 370px;
+  transition: 0.3s;
+}
+.application .img_mobile {
+  background: url(../img/mobile.png) no-repeat right center;
+  background-size: 377px 370px;
+  transition: 0.3s;
+}
+.application .img_tablet {
+  background: url(../img/galaxytab.png) no-repeat right center;
+  background-size: 374px 260px;
+  transition: 0.3s;
+}
+.application .img_laptop {
+  background: url(../img/laptop.png) no-repeat right center;
+  background-size: 469px 339px;
+  transition: 0.3s;
+}
+.application .img_automotive:hover {
+  background-size: 883px 406px;
+}
+.application .img_mobile:hover {
+  background-size: 414px 406px;
+}
+.application .img_tablet:hover {
+  background-size: 411px 285px;
+}
+.application .img_laptop:hover {
+  background-size: 515px 372px;
+}

@@ -1,0 +1,373 @@
+.s3 {
+  font-size: 2em;
+  /* font-size: 32px; */
+  /* font-size: 1.6666vw; */
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.service_form h2 {
+  text-align: center;
+  margin: 15.4162vh 0;
+  font-weight: bold;
+  font-size: 48px;
+}
+/* .inq_customer_info {
+  display: grid;
+  grid-template-columns: 2fr 4fr 4fr 2fr;
+} */
+p {
+  color: #a9a9a9;
+}
+h4 {
+  font-weight: bold;
+  width: 12.5vw;
+  margin-top: 0.5em; /* 16px */
+}
+h4:last-child {
+  margin: 0;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+input,
+textarea,
+#nation_lang {
+  border: 1px solid #a9a9a9;
+  border-radius: 5px;
+}
+.inq_content textarea {
+  resize: none;
+  width: 60.416vw;
+  height: 48.61vh;
+}
+.service_inq_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 0.78vw;
+}
+.service_inq_title img {
+  width: 4.11vw;
+  height: 4.11vh;
+  fill: #333;
+}
+.inq_customer_info {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+.inq_customer_info h4 {
+  display: inline-block;
+  margin-top: 1em;
+  /* width: 14.5vw; */
+  /* gap: 100px; */
+  /* height: 170px; */
+}
+.inq_customer_info_f {
+  gap: 20px;
+}
+
+.inq_customer_info_f input {
+  width: 100%;
+  height: 100%;
+}
+.inq_title,
+.inq_content,
+.inq_language_tab,
+.inq_check {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+.inq_language_tab {
+  margin-bottom: 30px;
+  align-items: center;
+}
+.inq_customer_info_f [class^="required_mark"] {
+  width: 29.16vw;
+  height: 70px;
+  padding: 0;
+}
+.inq_content {
+  margin: 25px 0;
+  height: 48.612vh;
+}
+.inq_title #title {
+  width: 100%;
+  /* width: 60.416vw; */
+  height: 7.47vh;
+}
+.inq_content #textbox {
+  width: 100%;
+  /* width: 60.416vw; */
+  height: 48.612vh;
+  padding: 25px; /* 1.24vw; */
+}
+
+.inq_language_tab #nation_lang {
+  width: 300px;
+  height: 6.17vh;
+  color: #333;
+  cursor: pointer;
+}
+#nation_lang::placeholder {
+  margin-right: 20px;
+}
+.inq_title {
+  margin-top: 20px;
+  align-items: center;
+}
+.inq_check {
+  margin-bottom: 9.763vh;
+}
+.inq_separation1 {
+  margin: 6.11vh 0;
+}
+p {
+  text-align: center;
+  padding-top: 3.08vh;
+}
+button {
+  display: inline-block;
+  text-align: center;
+}
+#submit_btn {
+  width: 280px;
+  height: 60px;
+  color: #0c4da2;
+  border: 1px solid #0c4da2;
+  background: #fff;
+  display: block;
+  margin: 6.22vh auto 8.22vh;
+  /* font-size: 17px; */
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+}
+.inq_check {
+  align-items: center;
+}
+#submit_btn:hover {
+  background: #0c4da2;
+  color: #fff;
+  font-weight: bold;
+}
+:focus {
+  outline: none;
+}
+.inq_customer_info input::placeholder {
+  color: #333;
+}
+input {
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+.required_mark {
+  position: relative;
+}
+.required_mark i {
+  position: absolute;
+  left: 12px;
+  top: 60px;
+  transform: translateY(-50%);
+  /* line-height: 9vh; */
+  color: #ff4141;
+  font-size: 10px;
+}
+.inq_title .required_mark {
+  position: relative;
+}
+.inq_title .required_mark i,
+.inq_content .required_mark i {
+  font-size: 1.25rem;
+  top: 2.25rem; /* 36px */
+  left: 4.56rem; /* 3.802vw; 73px */
+}
+
+.required_mark input:focus i {
+  display: none;
+}
+
+input:focus-within i {
+  display: none;
+}
+.inq_check input {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+.inq_check .inq_check_news {
+  display: flex;
+  align-items: center;
+}
+.inq_check_news label {
+  cursor: pointer;
+}
+#nation_lang {
+  padding-left: 20px;
+}
+input[type="checkbox"] {
+  accent-color: #0c4da2;
+}
+@media screen and (max-width: 1160px) {
+}
+@media screen and (max-width: 1023px) {
+  .s3 {
+    font-size: 24px;
+  }
+  .service_form h2 {
+    font-size: 40px;
+  }
+  .inq_content .required_mark i {
+    font-size: 1.25rem;
+    top: 1.7rem;
+    left: 3.46rem;
+  }
+  .inq_title .required_mark i {
+    font-size: 1.25em;
+    top: 2.38em;
+    left: 4.46rem;
+  }
+  .inq_customer_info .s3,
+  .inq_title .s3 {
+    margin-top: 20px;
+  }
+  .service_form h2 {
+    margin: 7.77vh 0;
+  }
+  .inq_separation1 {
+    margin: 8.11vh 0 6.11vh;
+  }
+  .inq_language_tab #nation_lang {
+    width: 29.41vw;
+  }
+  #submit_btn {
+    width: 220px;
+    height: 50px;
+  }
+  .s3 {
+    font-size: 3vw;
+  }
+  [class^="required_mark"] {
+    height: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .s3 {
+    font-size: 24px;
+    width: 100%;
+  }
+  .inq_customer_info .s3,
+  .inq_title .s3 {
+    margin-top: 10px;
+  }
+  .inq_separation1 {
+    margin: 50px 0 10px;
+  }
+  p {
+    width: 78.2vw;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  h4 {
+    margin-bottom: 0;
+  }
+  .service_form h2 {
+    font-size: 32px;
+  }
+  .inq_customer_info,
+  .inq_title,
+  .inq_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .inq_customer_info h4 {
+    width: 100%;
+  }
+  .inq_customer_info_f {
+    gap: 10px;
+  }
+  textarea {
+    width: 100%;
+
+    margin-top: 22px;
+    display: block;
+  }
+  .inq_title .input_wrap {
+    width: 100%;
+  }
+  .inq_content .input_wrap {
+    width: 100%;
+  }
+  .inq_content {
+    height: 390px;
+  }
+  .inq_language_tab,
+  .inq_check {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .inq_language_tab h4,
+  .inq_check h4 {
+    margin-top: 0;
+  }
+
+  .inq_check {
+    margin-bottom: 30px;
+  }
+  .inq_title .required_mark i,
+  .inq_content .required_mark i {
+    font-size: 1.25rem;
+    top: 1.58rem;
+    left: 3.26rem;
+  }
+  .inq_content {
+    height: 360px;
+  }
+  /* 디자인수정 */
+  .inq_customer_info_f [class^="required_mark"] {
+    width: 100%;
+  }
+  .inq_title #title {
+    height: 70px;
+  }
+  .inq_content #textbox {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .service_form h2 {
+    margin: 1.77vh 0 2.77vh;
+  }
+  /* .inq_content #textbox {
+    height: 32.612vh;
+  } */
+  .inq_content {
+    height: 360px;
+  }
+  .inq_language_tab,
+  .inq_check {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .inq_language_tab #nation_lang {
+    width: 100%;
+    height: 55px;
+  }
+  .service_info_anw p:last-child {
+    margin-top: 0;
+  }
+}
+input.warning,
+.inq_content #textbox.warning {
+  border: 1px solid red;
+}
+
+input.warning::placeholder,
+.inq_content #textbox.warning::placeholder {
+  color: red;
+  font-style: italic;
+}
