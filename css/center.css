@@ -1,0 +1,196 @@
+.center_map {
+  width: 100%;
+  height: 500px;
+  display: none;
+}
+
+/* BANNER */
+.banner .inner {
+  height: 100%;
+  position: relative;
+}
+.banner {
+  position: relative;
+  background: url(../img/img_center_banner.png) no-repeat center center/cover;
+  width: 100%;
+  height: 550px;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.banner .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fafafa;
+  text-align: center;
+  display: block;
+}
+.banner h2 {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+.banner h3 {
+  font-size: 24px;
+}
+.banner .page_info {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 17px;
+}
+.banner .page_info span {
+  margin: 0 20px;
+}
+.banner .page_info span:last-child {
+  color: #fafafa;
+}
+/* 지도 이미지 */
+.map_img{
+  width: 100%; height: 735px;
+  position: relative;
+}
+.map_img img {
+  width: 100%; height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0; left: 0;
+}
+.map_img img.active {
+  visibility: visible;
+  opacity: 1;
+}
+/* TAB MENU */
+.tab-wrapper {
+  position: relative;
+}
+.tab-menu {
+  position: absolute;
+  display: flex;
+  gap: 150px;
+  top: 550px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tab-menu li {
+  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  width: 152px;
+}
+/* .tab-menu li 에 active 들어오면 색 변화 */
+.tab-menu li.active > div{
+  border: 2px solid var(--highlight-color);
+}
+.tab-menu li.active .innerbox {
+  background: var(--highlight-color);
+}
+.tab-menu li.active .innerbox a{
+  color: #fff;
+}
+.tab-menu li:after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  border: 2px solid #cfcfcf;
+  top: 30%;
+  left: 100%;
+  transform: translate(50%, -100%);
+}
+.tab-menu li:last-child:after {
+  display: none;
+}
+.tab-menu li > div {
+  width: 75px;
+  height: 75px;
+  border: 2px solid #a9a9a9;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tab-menu li .innerbox {
+  width: 50px;
+  height: 50px;
+  background-color: #a9a9a9;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+.tab-menu li div a {
+  transform: rotate(-45deg);
+  text-align: center;
+  align-items: center;
+  display: block;
+  line-height: 50px;
+  font-size: 24px;
+}
+.tab-menu li h3 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* 사업장 LIST */
+#tab-content > div{
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+#tab-content > div.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.center_accordion li > div {
+  padding: 30px;
+  border-bottom: 1px solid #cfcfcf;
+  box-sizing: border-box;
+}
+.center_accordion li .center_name {
+  position: relative;
+}
+.center_accordion li h4 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.center_accordion li p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a9a9a9;
+  margin-bottom: 5px;
+}
+.center_accordion li p:last-child {
+  margin-bottom: 0;
+}
+.center_accordion li i {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  transition: 0.5s;
+}
+/* .center_name 에 active 들어오면 화살표 방향 rotate */
+.center_name.active i {
+  transform: rotate(180deg);
+}
