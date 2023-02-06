@@ -4,8 +4,8 @@ section {
 }
 /* BANNER */
 body {
-  background-color: #050505;
-  /* background-color: black; */
+  /* background-color: #050505; */
+  background-color: black;
 }
 .banner .inner {
   height: 100%;
@@ -63,7 +63,7 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  height: 200vh;
+  height: 150vh;
   background: #050505;
 }
 .keyword {
@@ -80,7 +80,7 @@ body {
   text-align: center;
   font-size: 7.5vw; /* 폰트 사이즈 너무 커서 120px로 바꿈 */
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 .keyword p:last-child {
   margin-bottom: 0;
@@ -91,7 +91,7 @@ body {
   position: relative;
   width: 100%;
 }
-/* .key_expression video {
+.key_expression video {
   position: fixed;
   width: 100%;
   object-fit: cover;
@@ -100,8 +100,8 @@ body {
   top: 0;
   bottom: 0;
   z-index: -1;
-} */
-.key_expression img {
+}
+/* .key_expression img {
   position: fixed;
   width: 100vw;
   object-fit: cover;
@@ -110,7 +110,7 @@ body {
   top: 0;
   bottom: 0;
   z-index: -1;
-}
+} */
 .key_expression div {
   text-align: justify;
   margin: 100vh auto;
@@ -130,6 +130,7 @@ body {
 .sub_title {
   color: #fff;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 .description {
   color: #fff;
@@ -138,6 +139,7 @@ body {
 }
 .main_title {
   font-size: 100px;
+  line-height: 1;
 }
 .sub_title,
 .description {
@@ -171,6 +173,7 @@ body {
 }
 .oled_title {
   font-size: 40px;
+  font-weight: bold;
 }
 .about_oled {
   font-size: 20px;
@@ -226,16 +229,12 @@ body {
   color: #a9a9a9;
 }
 .layer-name-list {
-  display: flex;
-  align-content: flex-start;
-  /* flex-flow: column; */
-  height: 80px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
   list-style: none;
-  flex-wrap: wrap;
   margin-top: 100px;
 }
 .layer-name-item {
-  min-width: 180px;
   margin-top: 12px;
   text-align: left;
 }
@@ -248,6 +247,7 @@ body {
   top: 0;
   left: 0;
 }
+
 .oled_desc {
   width: 774px;
   display: flex;
@@ -285,6 +285,7 @@ body {
 }
 .flicker figcaption p,
 .flicker_free figcaption p {
+  font-weight: bold;
   font-size: 48px;
   margin-bottom: 5px;
 }
@@ -308,6 +309,7 @@ body {
   position: absolute;
   right: -10%;
   bottom: 12%;
+  overflow: hidden;
   /* left: 50%; */
   /* transform: translateX(-50%); */
 }
@@ -317,21 +319,22 @@ body {
 .darkmode .laptop_wrap .laptop_black {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -100%;
   height: 100%;
   display: block;
-  opacity: 0;
-  opacity: 1;
+  /* opacity: 1; */
+  transition: left 0.3s;
 }
 .darkmode-desc-wrap {
   position: absolute;
-  bottom: 20%;
+  bottom: 25%;
   color: #fff;
 }
 .darkmode-desc-box {
   margin-bottom: 50px;
 }
 .darkmode-desc-box > p {
+  font-weight: bold;
   font-size: 48px;
   text-transform: uppercase;
 }
@@ -344,11 +347,12 @@ body {
 }
 .darkmode-desc-text > p {
   font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 10px;
+  /* font-weight: 400; */
+  margin-bottom: 0px;
 }
 .darkmode-desc-group figure {
-  margin-left: 10px;
+  margin-left: 15px;
+  margin-top: 5px;
 }
 
 /* FOLDERBLE */
