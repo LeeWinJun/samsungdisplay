@@ -1,10 +1,9 @@
-$(".read_more").click(function(e){
+$(".read_more").click(function (e) {
     e.preventDefault();
-})
-$("#newsroom_link").click(function(e){
+});
+$("#newsroom_link").click(function (e) {
     e.preventDefault();
-})
-
+});
 
 /* ----- SLIDE ----- */
 
@@ -101,6 +100,7 @@ let tabMenu = $(".tab-menu li"),
 tabContent.hide();
 tabContent.eq(0).show();
 
+
 tabMenu.click(function (e) {
     e.preventDefault();
 
@@ -111,8 +111,11 @@ tabMenu.click(function (e) {
 
     tabContent.hide();
     tabContent.eq(targetIdx).fadeIn();
-});
 
+    $(".article_list .article_content").slideUp();
+    $(".article_list .article_title").removeClass("active");
+
+});
 
 /* ----- PAGINATION ----- */
 
@@ -135,12 +138,14 @@ tabContent.each(function () {
     for (let i = 1; i <= pageCount; i++) {
         numbers.append(`<li><a href="">${i}</a></li>`);
     }
-
+ 
     let numberBtn = numbers.find("a");
 
     numberBtn.click((e) => {
         e.preventDefault();
         displayRow($(e.target).parent().index());
+        $(".article_list .article_content").slideUp();
+        $(".article_list .article_title").removeClass("active");
     });
 
     function displayRow(num) {
@@ -149,7 +154,7 @@ tabContent.each(function () {
         let start = num * rowsPerPage;
         let end = start + rowsPerPage;
 
-        rows.slice(start, end).fadeIn();
+        rows.slice(start, end).show();
 
         numberBtn.removeClass("active");
         numberBtn.eq(num).addClass("active");
@@ -190,76 +195,48 @@ tabContent.each(function () {
     displayPage(0);
 
 
+    /* ----- RESIZE EVENT ----- */
+
+    let windowSize = $(window).innerWidth;
+    $(window).resize(function(){
+        if(windowSize > 768 && window.innerWidth <= 768){
+            displayRow(0);
+            displayPage(0);
+        }
+        if(windowSize <= 768 && window.innerWidth > 768){
+            displayRow(0);
+            displayPage(0);
+        }
+        windowSize = window.innerWidth;
+    });
+
+    /* ----- LOAD MORE ----- */
+
+    $(".load-more").click(function () {
+        rows.filter(':hidden').slice(0, 5).slideDown();
+        
+        if (rows.filter(':hidden').length == 0) {
+            $(".load-more").fadeOut();
+        }
+    });
+
+    tabMenu.click(function(e){
+        e.preventDefault();
+        displayRow(0);
+        displayPage(0);
+    })
+
 });
-
-/* ----- LOAD MORE ----- */
-
-/*
-let container = $(".article_list"),
-loadMoreBtn = $(".load-more"),
-addItemCount = 5, //표시할 개수
-added = 0, //표시된 개수
-allData = []; //json 파일내 내용을 담을 배열
-
-$.getJSON("./data/content.json", initArticle);
-
-function initArticle(result) {
-allData = result;
-addItems(); //목록 추가
-loadMoreBtn.on("click", addItems);
-} //initGallery
-
-function addItems() {
-let itemHTML = "",
-  slicedData = allData.slice(added, added + addItemCount);
-
-$.each(slicedData, function (i, item) {
-  itemHTML += `<li>
-                    <div class="article_title">
-                        <h3>${item.title}</h3>
-                        <h4>${item.yymm}<strong>${item.dd}</strong></h4>
-                        <span>
-                            <i class="fa-solid fa-plus"></i>
-                        </span>
-                    </div>
-                    <div class="article_content">
-                        <article class="d-flex">
-                            <img src="${item.image}" alt="" />
-                            <div class="d-flex">
-                                <div class="article_text d-flex">
-                                    <h3>${item.title}</h3>
-                                    <h4>${item.date}</h4>
-                                    <p>${item.p1}</p>
-                                    <p>${item.p2}</p>
-                                    <p>${item.p3}</p>
-                                </div>
-                                <a href="" class="read_more">read more <i class="fa-solid fa-arrow-right"></i></a>
-                            </div>  
-                        </article>
-                    </div>
-                </li>`;
-});
-container.append(itemHTML);
-added += addItemCount;
-
-if (added < allData.length) {
-  loadMoreBtn.show();
-} else {
-  loadMoreBtn.hide();
-}
-} //addItems
-
-*/
-
 
 
 /* ----- ACCORDION ----- */
 
 let articleList = $(".article_list");
 
+articleList.find(".article_content").slideUp();
+
 articleList.each(function () {
-    let title = $(this).find(".article_title"),
-        content = $(this).find(".article_content");
+    let title = $(this).find(".article_title");
 
     title.click(function () {
         $(this).next().slideToggle();
