@@ -52,16 +52,16 @@ function initMap() {
         //console.log("lat: "+$(value).attr('data-lat'));
         let coordinate = { lat: parseFloat($(value).attr('data-lat')), lng: parseFloat($(value).attr('data-lng')) };
 
-        let mapDivId = $(value).attr('id');
+        let mapAttrId = $(value).attr('id');
 
-        maps[mapDivId] = new google.maps.Map(document.getElementById(mapDivId), {
+        maps[mapAttrId] = new google.maps.Map(document.getElementById(mapAttrId), {
             zoom: 15,
             center: coordinate
         });
 
-        markers[mapDivId] = new google.maps.Marker({
+        markers[mapAttrId] = new google.maps.Marker({
             position: coordinate,
-            map: maps[mapDivId],
+            map: maps[mapAttrId],
             animation:google.maps.Animation.BOUNCE
         });
 
