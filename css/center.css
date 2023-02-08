@@ -45,6 +45,7 @@
 /* TAB MENU */
 .tab-wrapper {
     position: relative;
+    margin-bottom: 150px;
 }
 .menu-wrapper {
     width: 100%;
