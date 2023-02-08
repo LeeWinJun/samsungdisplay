@@ -22,55 +22,8 @@
 
 /* banner */
 
-.banner .inner {
-    height: 100%;
-    position: relative;
-}
 .banner {
-    position: relative;
     background: url(../images/news_banner_bg.jpg) no-repeat center/cover;
-    width: 100%;
-    height: 550px;
-}
-.banner:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: #000;
-    opacity: 0.5;
-}
-.banner .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fafafa;
-}
-.banner .title h2 {
-    font-size: 70px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-.banner .title h3 {
-    font-size: var(--fontsize-md);
-    line-height: var(--lineheight-md);
-}
-.banner .locate {
-    font-size: var(--fontsize-sm);
-    line-height: var(--lineheight-sm);
-    position: absolute;
-    right: 0;
-    bottom: 80px;
-    text-align: center;
-    color: #fafafa;
-}
-.banner .locate span {
-    margin: 0 20px;
 }
 
 /* newsletter */
@@ -474,16 +427,6 @@
         --lineheight-md: 21px;
         --lineheight-sm: 20px;
     }
-    .banner {
-        height: 40vw;
-    }
-    .banner .title h2 {
-        font-size: 48px;
-        line-height: 56px;
-    }
-    .banner .locate {
-        bottom: 12%;
-    }
 
     .newsletter_desc {
         margin-bottom: 4vw;
@@ -537,16 +480,6 @@
     :root {
         --fontsize-sm: 14px;
         --lineheight-sm: 18px;
-    }
-    .banner {
-        height: 50vw;
-    }
-    .banner .title h2 {
-        font-size: 32px;
-        line-height: 40px;
-    }
-    .banner .locate span {
-        margin: 0 15px;
     }
 
     .newsletter_desc {
@@ -629,16 +562,6 @@
 }
 
 @media screen and (max-width: 500px) {
-    .banner {
-        height: 250px;
-    }
-    .banner .title h2 {
-        font-size: 32px;
-        line-height: 38px;
-    }
-    .banner .locate span {
-        margin: 0 10px;
-    }
 
     .slide-container > li .contents .img {
         grid-column: 2/-2;
