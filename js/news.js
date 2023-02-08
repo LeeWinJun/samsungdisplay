@@ -5,6 +5,7 @@ $("#newsroom_link").click(function (e) {
     e.preventDefault();
 });
 
+
 /* ----- SLIDE ----- */
 
 let sliderWrapper = $(".slide-wrapper"),
@@ -30,7 +31,6 @@ slides.each(function (i) {
 let pagerBtn = pager.find("a");
 
 //슬라이드 이동 함수
-/* 함수 gotoSlide(i) */
 function gotoSlide(i) {
     slideContainer.animate({ left: `-${i * 100}%` });
     currentIdx = i;
@@ -57,7 +57,7 @@ let active = false;
 
 navNext.click(function (e) {
     e.preventDefault();
-    if(active == false){
+    if (active == false) {
         let ni = currentIdx + 1;
         if (ni > slideCount - 1) {
             gotoSlide(0);
@@ -65,14 +65,14 @@ navNext.click(function (e) {
             gotoSlide(ni);
         }
         active = true;
-        setTimeout(function(){
+        setTimeout(function () {
             active = false;
-        },300)
+        }, 300);
     }
 });
 navPrev.click(function (e) {
     e.preventDefault();
-    if(active == false){
+    if (active == false) {
         let ni = currentIdx - 1;
         if (ni < 0) {
             gotoSlide(slideCount - 1);
@@ -80,12 +80,11 @@ navPrev.click(function (e) {
             gotoSlide(ni);
         }
         active = true;
-        setTimeout(function(){
+        setTimeout(function () {
             active = false;
-        },300)
+        }, 300);
     }
 });
-
 
 //자동 슬라이드
 function startAutoSlide() {
@@ -107,7 +106,6 @@ sliderWrapper.mouseleave(function () {
 });
 
 
-
 /* ----- TAB ----- */
 
 let tabMenu = $(".tab-menu li"),
@@ -115,7 +113,6 @@ let tabMenu = $(".tab-menu li"),
 
 tabContent.hide();
 tabContent.eq(0).show();
-
 
 tabMenu.click(function (e) {
     e.preventDefault();
@@ -128,9 +125,9 @@ tabMenu.click(function (e) {
     tabContent.hide();
     tabContent.eq(targetIdx).fadeIn();
 
+    //탭 클릭 시 이전 탭의 아코디언 해제
     $(".article_list .article_content").slideUp();
     $(".article_list .article_title").removeClass("active");
-
 });
 
 /* ----- PAGINATION ----- */
@@ -151,10 +148,11 @@ tabContent.each(function () {
     // console.log(rowsCount);
     // console.log(pageCount);
 
+    //페이지 버튼 생성
     for (let i = 1; i <= pageCount; i++) {
         numbers.append(`<li><a href="">${i}</a></li>`);
     }
- 
+
     let numberBtn = numbers.find("a");
 
     numberBtn.click((e) => {
@@ -164,6 +162,7 @@ tabContent.each(function () {
         $(".article_list .article_title").removeClass("active");
     });
 
+    //게시물 나열
     function displayRow(num) {
         rows.hide();
 
@@ -177,9 +176,9 @@ tabContent.each(function () {
     }
     displayRow(0);
 
+    //페이지 및 페이지네이션 배치
     function displayPage(num) {
-        //모든 페이지네이션 안보이도록
-        numberBtn.hide();
+        numberBtn.hide(); //모든 페이지네이션 안보이도록
         let totalPageCount = Math.ceil(pageCount / maxPageNum);
         let start = num * maxPageNum;
         let end = start + maxPageNum;
@@ -197,6 +196,7 @@ tabContent.each(function () {
         }
     }
 
+    //페이지 버튼 클릭 시 이동
     nextPageBtn.click(() => {
         ++pageActiveIdx;
         displayRow(pageActiveIdx * maxPageNum);
@@ -210,16 +210,16 @@ tabContent.each(function () {
     });
     displayPage(0);
 
-
     /* ----- RESIZE EVENT ----- */
 
+    //페이지네이션과 load more 버튼 교체 지점 통과 시 1페이지 및 게시물 5개 나열
     let windowSize = $(window).innerWidth;
-    $(window).resize(function(){
-        if(windowSize > 768 && window.innerWidth <= 768){
+    $(window).resize(function () {
+        if (windowSize > 768 && window.innerWidth <= 768) {
             displayRow(0);
             displayPage(0);
         }
-        if(windowSize <= 768 && window.innerWidth > 768){
+        if (windowSize <= 768 && window.innerWidth > 768) {
             displayRow(0);
             displayPage(0);
         }
@@ -228,20 +228,21 @@ tabContent.each(function () {
 
     /* ----- LOAD MORE ----- */
 
+    //load more 클릭 시 게시물 5개씩 추가 나열
     $(".load-more").click(function () {
-        rows.filter(':hidden').slice(0, 5).slideDown();
-        
-        if (rows.filter(':hidden').length == 0) {
+        rows.filter(":hidden").slice(0, 5).slideDown();
+
+        if (rows.filter(":hidden").length == 0) {
             $(".load-more").fadeOut();
         }
     });
 
-    tabMenu.click(function(e){
+    //다른 탭으로 이동 시 1페이지 및 게시물 5개 나열
+    tabMenu.click(function (e) {
         e.preventDefault();
         displayRow(0);
         displayPage(0);
-    })
-
+    });
 });
 
 
@@ -249,6 +250,7 @@ tabContent.each(function () {
 
 let articleList = $(".article_list");
 
+//처음에 모든 아코디언 닫히도록
 articleList.find(".article_content").slideUp();
 
 articleList.each(function () {
@@ -262,4 +264,3 @@ articleList.each(function () {
         $(this).parent("li").siblings().find(".article_title").removeClass("active");
     });
 });
-
