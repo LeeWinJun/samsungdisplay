@@ -296,4 +296,17 @@ input[type="checkbox"] {
     font-size: 15px;
     line-height: calc(100% * 1.31);
   }
+  .service_checked label {
+    width: 65%;
+  }
+  .sub_title p:first-child {
+    margin-right: 0;
+  }
+  .service_checked {
+    margin-bottom: 3.22vh;
+  }
+  .customer_center_info {
+    padding-bottom: 2.77vh;
+    padding-top: 9.5vh;
+  }
 }
