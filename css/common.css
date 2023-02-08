@@ -566,10 +566,12 @@ footer .copyright p {
   margin-bottom: 30px;
 }
 /* TOP Button */
-#go-top{
+#go-top {
   position: fixed;
-  right: 3vw; bottom: 10%;
-  width: 90px; height: 90px;
+  right: 3vw;
+  bottom: 10%;
+  width: 90px;
+  height: 90px;
   box-sizing: content-box;
   z-index: 100;
   border-radius: 50%;
@@ -580,21 +582,24 @@ footer .copyright p {
   background: #fafafa;
   mix-blend-mode: difference;
 }
-#go-top .go-to-color{
+#go-top .go-to-color {
   background: #0c4da2;
   position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border-radius: 50%;
   mix-blend-mode: difference;
   transform: scale(0%);
-  transition: transform 1s ;
+  transition: transform 1s;
 }
-#go-top:hover .go-to-color{
+#go-top:hover .go-to-color {
   color: #fafafa;
   mix-blend-mode: difference;
   transform: scale(100%);
 }
-#go-top > *{
+#go-top > * {
   z-index: 200;
 }
 
@@ -685,9 +690,9 @@ dialog {
   .banner .locate {
     bottom: 12%;
   }
-  #go-top{
+  #go-top {
     right: 1vw;
-    }
+  }
 }
 @media screen and (max-width: 1340px) {
   footer .menu_md ul {
@@ -709,8 +714,6 @@ dialog {
   }
   footer .menu_md .menu {
     font-size: 17px;
-  }
-  footer {
   }
   footer h1 {
     display: none;
@@ -831,8 +834,7 @@ dialog {
   footer .company_tt {
     font-size: 16px;
   }
-  @media screen and (max-width: 1023px) {
-    dialog {
+  dialog {
     right: -35vw;
   }
 }
@@ -862,12 +864,12 @@ dialog {
     gap: 5px;
   }
   dialog {
-    width:68%;
+    width: 68%;
     right: -19vw;
   }
-  #go-top{
-    width: 50px; height: 50px;
+  #go-top {
+    width: 50px;
+    height: 50px;
     font-size: var(--fontsize-sm);
   }
-
 }
