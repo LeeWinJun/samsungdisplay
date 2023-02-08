@@ -9,6 +9,8 @@
     --lineheight-lg: 36px;
     --lineheight-md: 27px;
     --lineheight-sm: 19px;
+    
+    --highlight-color:#0c4da2;
 }
 .center_map {
     width: 100%;
