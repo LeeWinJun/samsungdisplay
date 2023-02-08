@@ -263,21 +263,3 @@ articleList.each(function () {
     });
 });
 
-
-/* ----- GO TO TOP ----- */
-
-let $btt = $('#go-top');
-let $window = $(window);
-
-$btt.hide();
-$window.scroll(function(){
-    let scrollAmt = $(this).scrollTop();
-    console.log(scrollAmt);
-    scrollAmt > 300 ? $btt.fadeIn(): $btt.fadeOut();
-});
-
-$btt.click(function(e){
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0},700,'easeInOutCubic');
-});
-
