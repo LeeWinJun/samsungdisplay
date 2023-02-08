@@ -53,24 +53,39 @@ function slideUpdate() {
 slideUpdate();
 
 //버튼을 클릭하면 슬라이드 이동
+let active = false;
+
 navNext.click(function (e) {
     e.preventDefault();
-    let ni = currentIdx + 1;
-    if (ni > slideCount - 1) {
-        gotoSlide(0);
-    } else {
-        gotoSlide(ni);
+    if(active == false){
+        let ni = currentIdx + 1;
+        if (ni > slideCount - 1) {
+            gotoSlide(0);
+        } else {
+            gotoSlide(ni);
+        }
+        active = true;
+        setTimeout(function(){
+            active = false;
+        },300)
     }
 });
 navPrev.click(function (e) {
     e.preventDefault();
-    let ni = currentIdx - 1;
-    if (ni < 0) {
-        gotoSlide(slideCount - 1);
-    } else {
-        gotoSlide(ni);
+    if(active == false){
+        let ni = currentIdx - 1;
+        if (ni < 0) {
+            gotoSlide(slideCount - 1);
+        } else {
+            gotoSlide(ni);
+        }
+        active = true;
+        setTimeout(function(){
+            active = false;
+        },300)
     }
 });
+
 
 //자동 슬라이드
 function startAutoSlide() {
@@ -90,6 +105,7 @@ sliderWrapper.mouseenter(function () {
 sliderWrapper.mouseleave(function () {
     startAutoSlide();
 });
+
 
 
 /* ----- TAB ----- */
@@ -246,3 +262,22 @@ articleList.each(function () {
         $(this).parent("li").siblings().find(".article_title").removeClass("active");
     });
 });
+
+
+/* ----- GO TO TOP ----- */
+
+let $btt = $('#go-top');
+let $window = $(window);
+
+$btt.hide();
+$window.scroll(function(){
+    let scrollAmt = $(this).scrollTop();
+    console.log(scrollAmt);
+    scrollAmt > 300 ? $btt.fadeIn(): $btt.fadeOut();
+});
+
+$btt.click(function(e){
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0},700,'easeInOutCubic');
+});
+
