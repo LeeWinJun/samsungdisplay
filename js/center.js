@@ -23,9 +23,11 @@ tabMenu.click(function (e) {
     tabMap.removeClass("active");
     tabMap.eq(targetIdx).addClass("active");
 
+    //탭 클릭 시 이전 탭의 아코디언 해제
     $(".center_accordion .center_map").slideUp();
     $(".center_accordion .center_name").removeClass("active");
 });
+
 
 /* ----- ACCORDION ----- */
 
@@ -43,16 +45,19 @@ centerWarp.each(function () {
     });
 });
 
+
 /* ----- MAP-LOAD ----- */
 let maps = [];
 let markers = [];
+
+//함수 initMap 생성
 function initMap() {
     let $maps = $('.center_map');
     $.each($maps, function (i, value) {
         //console.log("lat: "+$(value).attr('data-lat'));
-        let coordinate = { lat: parseFloat($(value).attr('data-lat')), lng: parseFloat($(value).attr('data-lng')) };
+        let coordinate = { lat: parseFloat($(value).attr('data-lat')), lng: parseFloat($(value).attr('data-lng')) }; //지도 위도 경도 정보 저장
 
-        let mapAttrId = $(value).attr('id');
+        let mapAttrId = $(value).attr('id'); //지도를 로드할 id명 저장
 
         maps[mapAttrId] = new google.maps.Map(document.getElementById(mapAttrId), {
             zoom: 15,
