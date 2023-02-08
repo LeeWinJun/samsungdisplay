@@ -1,7 +1,7 @@
 /* ----- TAB ----- */
 
 let tabMenu = $(".tab-menu li"),
-    tabMap = $('.map_img img'),
+    tabMap = $(".map_img img"),
     tabContent = $("#tab-content > div");
 
 tabContent.hide();
@@ -22,51 +22,49 @@ tabMenu.click(function (e) {
 
     tabMap.removeClass("active");
     tabMap.eq(targetIdx).addClass("active");
+
+    $(".center_accordion .center_map").slideUp();
+    $(".center_accordion .center_name").removeClass("active");
 });
 
+/* ----- ACCORDION ----- */
 
-/* ----- ACCORDION & MAP-LOAD ----- */
+let centerWarp = $(".center_accordion");
 
-let centerList = $('.center_accordion');
-
-centerList.each(function(){
+centerWarp.each(function () {
     let title = $(this).find(".center_name");
 
     title.click(function () {
-        let centerMap = $(this).next(".center_map");
-        console.log(centerMap);
         $(this).next().slideToggle();
-        $(this).parent('li').siblings().find('.center_map').slideUp();
+        $(this).parent("li").siblings().find(".center_map").slideUp();
 
         $(this).toggleClass("active");
-        $(this).parent('li').siblings().find(".center_name").removeClass("active");
-
-        let centerLat = $(this).attr('data-lat'),
-            centerLng = $(this).attr('data-lng');
-
-        console.log(centerLat);
-        console.log(centerLng);
-        
-        initMap(centerMap, centerLat, centerLng);
-
-        let map;
-        function initMap(centerMap, centerLat, centerLng) {
-            let mapProp= {
-                center:new google.maps.LatLng(centerLat,centerLng),
-                zoom:17,
-              };
-            // let marker = new google.maps.Marker({
-            //     position: { lat: `${centerLat}`, lng: `${centerLng}` },
-            //     map: mapProp,
-            // });
-            map = new google.maps.Map(centerMap,mapProp);
-    
-        }    
-       // $(window).initMap = initMap;
+        $(this).parent("li").siblings().find(".center_name").removeClass("active");
     });
-
-
-
-
 });
 
+/* ----- MAP-LOAD ----- */
+let maps = [];
+let markers = [];
+function initMap() {
+    let $maps = $('.center_map');
+    $.each($maps, function (i, value) {
+        //console.log("lat: "+$(value).attr('data-lat'));
+        let coordinate = { lat: parseFloat($(value).attr('data-lat')), lng: parseFloat($(value).attr('data-lng')) };
+
+        let mapDivId = $(value).attr('id');
+
+        maps[mapDivId] = new google.maps.Map(document.getElementById(mapDivId), {
+            zoom: 15,
+            center: coordinate
+        });
+
+        markers[mapDivId] = new google.maps.Marker({
+            position: coordinate,
+            map: maps[mapDivId],
+            animation:google.maps.Animation.BOUNCE
+        });
+
+    })
+
+};
