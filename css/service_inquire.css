@@ -3,13 +3,40 @@
   /* font-size: 32px; */
   /* font-size: 1.6666vw; */
 }
+body > hr {
+  border: 0px;
+  height: 1px;
+  background: #a9a9a9;
+}
+header .inner-2 p,
+header .inner-2 a {
+  color: #333;
+}
+header .inner-2 .sub-title {
+  padding-top: 0;
+  text-align: left;
+}
+header .inner-2 .menu-icon {
+  text-align: right;
+  padding-top: 0;
+}
+header .inner-2 h1 {
+  text-align: center;
+}
+header .inner-2 > * {
+  width: 30%;
+}
 .row {
   margin-right: 0;
   margin-left: 0;
 }
+form .inq_customer_info label,
+.input_wrap label {
+  display: none;
+}
+
 .service_form h2 {
   text-align: center;
-  margin: 15.4162vh 0;
   font-weight: bold;
   font-size: 48px;
 }
@@ -48,11 +75,15 @@ textarea,
   align-items: center;
   flex-direction: row-reverse;
   gap: 0.78vw;
+  margin: 27.77vh 0 15.4162vh;
 }
 .service_inq_title img {
-  width: 4.11vw;
-  height: 4.11vh;
+  width: 45px;
+  height: 45px;
   fill: #333;
+}
+.inq_title .input_wrap {
+  height: 70px;
 }
 .inq_customer_info {
   display: grid;
@@ -60,7 +91,7 @@ textarea,
 }
 .inq_customer_info h4 {
   display: inline-block;
-  margin-top: 1em;
+  /* margin-top: 1em; */
   /* width: 14.5vw; */
   /* gap: 100px; */
   /* height: 170px; */
@@ -71,8 +102,9 @@ textarea,
 
 .inq_customer_info_f input {
   width: 100%;
-  height: 100%;
+  height: 70px;
 }
+
 .inq_title,
 .inq_content,
 .inq_language_tab,
@@ -80,6 +112,10 @@ textarea,
   display: grid;
   grid-template-columns: 1fr 5fr;
 }
+.inq_title h4 {
+  margin-top: 0;
+}
+
 .inq_language_tab {
   margin-bottom: 30px;
   align-items: center;
@@ -96,7 +132,7 @@ textarea,
 .inq_title #title {
   width: 100%;
   /* width: 60.416vw; */
-  height: 7.47vh;
+  height: 100%;
 }
 .inq_content #textbox {
   width: 100%;
@@ -104,10 +140,14 @@ textarea,
   height: 48.612vh;
   padding: 25px; /* 1.24vw; */
 }
+.inq_language_tab h4,
+.inq_check h4 {
+  margin-top: 0;
+}
 
 .inq_language_tab #nation_lang {
   width: 300px;
-  height: 6.17vh;
+  height: 7.17vh;
   color: #333;
   cursor: pointer;
 }
@@ -139,7 +179,7 @@ button {
   border: 1px solid #0c4da2;
   background: #fff;
   display: block;
-  margin: 6.22vh auto 8.22vh;
+  margin: 8.22vh auto 15.22vh;
   /* font-size: 17px; */
   text-align: center;
   padding: 0;
@@ -157,7 +197,7 @@ button {
   outline: none;
 }
 .inq_customer_info input::placeholder {
-  color: #333;
+  /* color: #a9a9a9; */
 }
 input {
   padding-left: 25px;
@@ -170,7 +210,7 @@ input {
 .required_mark i {
   position: absolute;
   left: 12px;
-  top: 60px;
+  top: 36px;
   transform: translateY(-50%);
   /* line-height: 9vh; */
   color: #ff4141;
@@ -179,7 +219,12 @@ input {
 .inq_title .required_mark {
   position: relative;
 }
-.inq_title .required_mark i,
+.inq_title .required_mark i {
+  font-size: 1.25rem;
+  top: 1.25rem; /* 36px */
+  left: 4.56rem; /* 3.802vw; 73px */
+}
+
 .inq_content .required_mark i {
   font-size: 1.25rem;
   top: 2.25rem; /* 36px */
@@ -211,6 +256,17 @@ input:focus-within i {
 input[type="checkbox"] {
   accent-color: #0c4da2;
 }
+input.warning,
+.inq_content #textbox.warning {
+  border: 1px solid red;
+}
+
+input.warning::placeholder,
+.inq_content #textbox.warning::placeholder {
+  color: red;
+  font-style: italic;
+}
+
 @media screen and (max-width: 1160px) {
 }
 @media screen and (max-width: 1023px) {
@@ -222,20 +278,20 @@ input[type="checkbox"] {
   }
   .inq_content .required_mark i {
     font-size: 1.25rem;
-    top: 1.7rem;
-    left: 3.46rem;
+    top: 1.6em;
+    left: 4.4rem;
   }
   .inq_title .required_mark i {
     font-size: 1.25em;
-    top: 2.38em;
+    top: 1.88em;
     left: 4.46rem;
   }
   .inq_customer_info .s3,
   .inq_title .s3 {
     margin-top: 20px;
   }
-  .service_form h2 {
-    margin: 7.77vh 0;
+  .service_inq_title {
+    margin: 16.11vh 0 10.4162vh;
   }
   .inq_separation1 {
     margin: 8.11vh 0 6.11vh;
@@ -253,6 +309,9 @@ input[type="checkbox"] {
   [class^="required_mark"] {
     height: 50px;
   }
+  .inq_language_tab h4 {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 767px) {
   .s3 {
@@ -264,7 +323,7 @@ input[type="checkbox"] {
     margin-top: 10px;
   }
   .inq_separation1 {
-    margin: 50px 0 10px;
+    margin: 30px 0 10px;
   }
   p {
     width: 78.2vw;
@@ -327,6 +386,19 @@ input[type="checkbox"] {
   .inq_content {
     height: 360px;
   }
+  .inq_customer_info .s3,
+  .inq_title .s3 {
+    margin: 10px 0;
+  }
+  .inq_customer_info_f [class^="required_mark"] {
+    width: 100%;
+    height: 70px;
+  }
+  .service_inq_title img {
+    width: 30px;
+    height: 30px;
+    fill: #333;
+  }
   /* 디자인수정 */
   .inq_customer_info_f [class^="required_mark"] {
     width: 100%;
@@ -337,14 +409,11 @@ input[type="checkbox"] {
   .inq_content #textbox {
     height: 300px;
   }
+  .service_inq_title {
+    margin: 17.11vh 0 6.4162vh;
+  }
 }
 @media screen and (max-width: 500px) {
-  .service_form h2 {
-    margin: 1.77vh 0 2.77vh;
-  }
-  /* .inq_content #textbox {
-    height: 32.612vh;
-  } */
   .inq_content {
     height: 360px;
   }
@@ -360,14 +429,8 @@ input[type="checkbox"] {
   .service_info_anw p:last-child {
     margin-top: 0;
   }
-}
-input.warning,
-.inq_content #textbox.warning {
-  border: 1px solid red;
-}
-
-input.warning::placeholder,
-.inq_content #textbox.warning::placeholder {
-  color: red;
-  font-style: italic;
+  .inq_title .required_mark i,
+  .inq_content .required_mark i {
+    top: 1.38rem;
+  }
 }

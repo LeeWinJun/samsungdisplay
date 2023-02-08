@@ -2,62 +2,21 @@
   max-width: 1420px;
   margin: 0 auto;
 }
-
-.banner {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  background: url(../images/services.jpg) no-repeat center/cover;
-  /* height: 550px; */
-  height: 61vh;
+hr {
+  border: 0px;
+  height: 1px;
+  background: #a9a9a9;
 }
-.banner:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: #000;
-  opacity: 0.5;
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-.banner .main_title {
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+header .inner-2 p,
+header .inner-2 a {
   color: #fff;
 }
-.banner .page_info {
-  position: absolute;
-  bottom: 5.13vh;
-  right: 0;
-  display: flex;
-  color: #a9a9a9;
-  margin-right: 7.68vw;
+.sub_title p:first-child {
+  margin-right: 5px;
 }
-.banner .page_info span {
-  margin: 0 20px;
-}
-.banner .page_info .now {
-  color: #fff;
-}
-h4.active {
-  font-weight: bold;
-}
-
-.main_title .main_t_wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.17em;
-  flex-wrap: wrap;
-}
-.main_t_wrap .main_t1 {
-  margin-right: 0.3em;
-}
-
 .service_inquire h4 {
   margin-bottom: 12.33vh;
   color: #a9a9a9;
@@ -240,42 +199,16 @@ input[type="checkbox"] {
 .service_checkbox_wrap {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 input[type="checkbox"] {
   accent-color: #0c4da2;
   /* border: 1px solid #a9a9a9; */
 }
-input {
-  /* border: 1px solid #a9a9a9; */
-}
-/* 
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"] + label {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border: 3px solid #707070;
-  position: relative;
-}
-input[id="check1"]:checked + label::after {
-  content: "✔";
-  font-size: 25px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  top: 0;
-} */
 
 @media screen and (max-width: 1420px) {
   .inner {
     width: 90.8vw;
-  }
-  .banner {
-    height: 40vw;
   }
 }
 @media (max-width: 1023px) {
@@ -305,23 +238,14 @@ input[id="check1"]:checked + label::after {
   }
 }
 @media (max-width: 767px) {
-  .main_title .main_t_wrap {
-    margin-top: 5px;
-  }
   .service_inquire .service_tab h4:after {
     margin-top: 0.5125em;
   }
   .service_inquire h4 {
-    margin-bottom: 9.33vh;
+    margin-bottom: 7.33vh;
   }
   .s2 {
     font-size: 24px;
-  }
-  .main_t_wrap p {
-    font-size: 17px;
-  }
-  .main_title .main_t1 {
-    padding-top: 10px;
   }
   .service_title {
     margin: 6.775vh 0;
@@ -349,18 +273,11 @@ input[id="check1"]:checked + label::after {
     padding-bottom: 7.66vh;
   }
   .service_checked label {
-    width: 60%;
+    width: 50%;
     margin-left: 10px;
   }
 }
 @media (max-width: 500px) {
-  .main_title .main_t_wrap {
-    width: 53%;
-    margin: 0 auto;
-  }
-  .banner {
-    height: 50vw;
-  }
   .banner .page_info {
     bottom: 1.83vh;
   }
@@ -374,5 +291,9 @@ input[id="check1"]:checked + label::after {
   }
   .inq_language_tab #nation_lang {
     width: 100%;
+  }
+  .banner .title p {
+    font-size: 15px;
+    line-height: calc(100% * 1.31);
   }
 }
