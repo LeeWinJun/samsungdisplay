@@ -186,6 +186,7 @@
 .slide-wrapper .navigator .controler {
     justify-content: end;
     gap: 30px;
+    align-items: center;
 }
 .slide-wrapper .navigator .controler p {
     width: 167px;
