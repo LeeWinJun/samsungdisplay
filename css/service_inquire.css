@@ -1,6 +1,6 @@
 .s3 {
-  font-size: 2em;
-  /* font-size: 32px; */
+  /* font-size: 2em; */
+  font-size: 32px;
   /* font-size: 1.6666vw; */
 }
 body > hr {
@@ -75,7 +75,7 @@ textarea,
   align-items: center;
   flex-direction: row-reverse;
   gap: 0.78vw;
-  margin: 27.77vh 0 15.4162vh;
+  margin: 27.77vh 0 18.4162vh;
 }
 .service_inq_title img {
   width: 45px;
@@ -106,7 +106,7 @@ textarea,
 }
 .inq_customer_info_f input:focus,
 .inq_title input:focus,
-.inq_content textarea:focus{
+.inq_content textarea:focus {
   border: #0c4da2 2px solid;
 }
 .inq_title,
@@ -119,7 +119,11 @@ textarea,
 .inq_title h4 {
   margin-top: 0;
 }
-
+.inq_title .required_mark:after h4 {
+  content: "*";
+  color: red;
+  display: inline;
+}
 .inq_language_tab {
   margin-bottom: 30px;
   align-items: center;
@@ -222,14 +226,14 @@ input {
   position: relative;
 }
 .inq_title .required_mark i {
-  font-size: 1.25rem;
-  top: 1.25rem; /* 36px */
+  font-size: 13px;
+  top: 0;
   left: 4.56rem; /* 3.802vw; 73px */
 }
 
 .inq_content .required_mark i {
-  font-size: 1.25rem;
-  top: 2.25rem; /* 36px */
+  font-size: 13px;
+  top: 16px;
   left: 4.56rem; /* 3.802vw; 73px */
 }
 
@@ -251,6 +255,12 @@ input:focus-within i {
 }
 .inq_check_news label {
   cursor: pointer;
+}
+.required {
+  text-align-last: left;
+  padding: 0;
+  margin-bottom: 20px;
+  /* color: #333; */
 }
 #nation_lang {
   padding-left: 20px;
@@ -281,14 +291,14 @@ input.warning::placeholder,
     font-size: 40px;
   }
   .inq_content .required_mark i {
-    font-size: 1.25rem;
-    top: 1.6em;
-    left: 4.4rem;
+    /* font-size: 1.25rem; */
+    top: 18px;
+    left: 6.862vw;
   }
   .inq_title .required_mark i {
-    font-size: 1.25em;
+    /* font-size: 1.25em; */
     top: 1.88em;
-    left: 4.46rem;
+    left: 6.862vw;
   }
   .inq_customer_info .s3,
   .inq_title .s3 {
@@ -378,7 +388,7 @@ input.warning::placeholder,
     margin-top: 0;
   }
   .inq_customer_info_f input:focus,
-  .input_wrap input:focus{
+  .input_wrap input:focus {
     border: 2px solid #0c4da2;
   }
 
@@ -387,9 +397,9 @@ input.warning::placeholder,
   }
   .inq_title .required_mark i,
   .inq_content .required_mark i {
-    font-size: 1.25rem;
-    top: 1.58rem;
-    left: 3.26rem;
+    /* font-size: 1.25rem; */
+    top: 10px;
+    right: 0;
   }
   .inq_content {
     height: 360px;
@@ -439,11 +449,11 @@ input.warning::placeholder,
   }
   .inq_title .required_mark i,
   .inq_content .required_mark i {
-    top: 1.38rem;
+    left: 45px;
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     p {
-        width: 95%;
-      }
+      width: 95%;
+    }
   }
 }
