@@ -23,14 +23,14 @@ header .inner-2 .menu-icon {
 header .inner-2 h1 {
   text-align: center;
 }
+.icon-menu div {
+  background: #333;
+}
 p.sub-title {
   color: #333;
 }
 .menu_title .logo a {
   color: #333;
-}
-.icon-menu div {
-  background: #333;
 }
 .row {
   margin-right: 0;

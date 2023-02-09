@@ -8,7 +8,6 @@ header .inner-2 a {
   position: relative;
   background: url(../images/overview.jpg) no-repeat center/cover;
   width: 100%;
-  height: 550px;
 }
 img {
   width: 100%;
@@ -56,13 +55,12 @@ h4.active {
   /* background: url(../images/about_wrap.svg) no-repeat center/cover; */
   background: url(../images/about_wrap_wide.svg) no-repeat center/cover;
   width: 100%;
-  height: 55.55vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  height: 470px;
   /* background-attachment: fixed; */
 }
 
@@ -116,7 +114,9 @@ h4.active {
 .about_tt p:first-child {
   padding-bottom: 0.125em;
 }
-
+.icon-menu div {
+  background: #333;
+}
 /* OVERVIEW */
 #overview {
   width: 100%;
@@ -465,13 +465,9 @@ figure {
   margin: 0;
   font-weight: 600;
 }
-
-@media screen and (max-width: 1420px) {
-  .inner {
-    width: 90.8vw;
-  }
+.item-modal-wrap {
+  width: auto;
 }
-
 @media screen and (max-width: 1420px) {
   :root {
     --fontsize-xlg: 32px;
@@ -479,20 +475,15 @@ figure {
     --fontsize-md: 17px;
     --fontsize-sm: 16px;
   }
-  .banner {
-    height: 40vw;
+  .inner {
+    width: 90.8vw;
   }
   .banner .locate {
     bottom: 12%;
   }
 }
-@media screen and (max-width: 1200px) {
-  .item-modal-wrap {
-  }
-}
 @media (max-width: 1370px) {
   .goal_vision {
-    /* flex-direction: column; */
     gap: 20px;
   }
   .goal_vision p + p {
@@ -503,9 +494,6 @@ figure {
 @media (max-width: 1130px) {
   .goal_vision {
     height: 150px;
-  }
-    .item-modal-wrap {
-    width: auto;
   }
 }
 @media (max-width: 1023px) {
@@ -697,10 +685,6 @@ figure {
   .vision_img {
     margin-top: 20px;
   }
-  /* .about_sm {
-    mask-origin: 0;
-    width: 80%;
-  } */
   .about_sm p {
     margin: 0 10%;
   }
@@ -709,10 +693,6 @@ figure {
   }
   .goal_vision_wrap {
     justify-content: center;
-  }
-  .goal_img,
-  .vision_img {
-    margin-right: 20px;
   }
   /*추가*/
   .modal-btn a {
@@ -803,11 +783,8 @@ figure {
     width: 22.5vw;
     height: 15.3333vw;
   }
-
+}
 @media screen and (max-width: 560px) {
-  .about_wrap {
-    /* height: 25rem; */
-  }
   #overview table {
     width: 96%;
   }
@@ -879,6 +856,18 @@ figure {
   }
   .title .sub_title {
     margin-top: 10px;
+  }
+  #about_us {
+    height: 500px;
+  }
+  .about_sm p {
+    line-height: 1.5em;
+  }
+  .about_wrap {
+    justify-content: flex-start;
+  }
+  #about_us .gradient_tt {
+    padding-top: 20px;
   }
 }
 
