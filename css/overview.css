@@ -3,6 +3,13 @@ header .inner-2 p,
 header .inner-2 a {
   color: #fff;
 }
+
+.banner {
+    position: relative;
+    background: url(../images/overview.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 550px;
+}
 img {
   width: 100%;
 }
@@ -685,10 +692,13 @@ figure {
   .vision_img {
     margin-top: 20px;
   }
-  .about_sm {
+  /* .about_sm {
     mask-origin: 0;
     width: 80%;
-  }
+  } */
+  .about_sm p {
+    margin: 0 10%;
+}
   .title .sub_title {
     margin-top: 10px;
   }
