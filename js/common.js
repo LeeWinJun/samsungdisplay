@@ -33,6 +33,14 @@ $window.resize(function () {
 
 $window.trigger("resize");
 
+/* header-bg-black */
+window.addEventListener("onload", () => {
+  let headerBg = document.querySelector("header");
+  if (headerBg.classList.contains("h-bg")) {
+    headerBg.style.background = "rgba(255,255,255,0.3)";
+  }
+});
+
 //header scroll
 let lastScrollTop = 0;
 $(window).scroll(function () {
