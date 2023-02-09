@@ -1,6 +1,4 @@
 // location.href : 현재 페이지에 url을 뜻함.
-// 따라서 href가 변경되니까 URL주소가 변경되는 것을 뜻함.
-// 사실상 이동하는 개념보다는 URL을 변경한다고 생각해야함.
 let url = new URL(location.href);
 
 /*인풋 hidden에 value값에 param 값 넣기 */
@@ -22,20 +20,7 @@ $("#submit_btn").click(function () {
   let regexEmail =
     /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
-  // console.log(newsBtn); // 0
-  // console.log(newsChk); //false
-  //newsBtn 값 0(false), 1(true)
-  /*
-  if (newsChk == false) {
-    newsBtn = 0;
-    $("#news_chk").val("0");
-  } else {
-    // newsBtn = 1;
-    $("#news_chk").val("1");
-  }
-  console.log(newsBtn);
-  */
-
+    
   if (username == "") {
     setWarning(
       $("#username"),
