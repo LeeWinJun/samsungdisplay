@@ -20,7 +20,6 @@ $("#submit_btn").click(function () {
   let regexEmail =
     /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
-    
   if (username == "") {
     setWarning(
       $("#username"),
@@ -83,3 +82,36 @@ function setWarning(e, value, placeholder) {
       e.removeClass("warning").attr("placeholder", placeholder);
     });
 }
+
+$("#email").blur(function () {});
+
+/* ----- HEADER SCROLL color change ----- */
+
+header = $("header");
+menuText_1 = header.find($(".menu_title p"));
+menuText_2 = header.find($(".menu_title a"));
+function bannerWhite() {
+  $(".sub-title").css({ color: "#333" });
+  header.css({ color: "#333" });
+  menuText_1.css({ color: "#333" });
+  menuText_2.css({ color: "#333" });
+  // header.css({ background: "#fff" });
+}
+bannerWhite();
+
+const buttons = document.querySelectorAll(".overlay-m-menu-list > li");
+
+buttons.forEach(function (button, index) {
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    //let buttonsNum = buttons[i];
+
+    this.childNodes[3].classList.toggle("on");
+    this.childNodes[1].classList.toggle("rotate");
+    buttons.forEach(function (button2, index2) {
+      if (index !== index2) {
+        button2.childNodes[3].classList.remove("on");
+      }
+    });
+  });
+});
