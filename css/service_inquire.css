@@ -196,9 +196,7 @@ button {
 :focus {
   outline: none;
 }
-.inq_customer_info input::placeholder {
-  /* color: #a9a9a9; */
-}
+
 input {
   padding-left: 25px;
   box-sizing: border-box;
