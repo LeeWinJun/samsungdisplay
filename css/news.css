@@ -269,7 +269,6 @@
 
 .article_title h4 {
     order: 1;
-    /* width: 15%; */
     flex: 1;
     text-align: center;
     font-size: var(--fontsize-sm);
@@ -287,12 +286,10 @@
     font-size: var(--fontsize-md);
     line-height: var(--lineheight-md);
     order: 2;
-    /* width: 70%; */
     flex: 4;
 }
 .article_title span {
     order: 3;
-    /* width: 15%; */
     flex: 1;
     text-align: center;
 }
