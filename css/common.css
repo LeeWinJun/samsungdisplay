@@ -120,6 +120,7 @@ header {
   left: 0;
   top: 0;
   z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .close-btn {
   width: 45px;
@@ -225,7 +226,7 @@ header {
   margin: 0 0 8px 7px;
 }
 .overlay-menu-sub-list li a {
-  padding: 25px 0;
+  padding: 20px;
   display: block;
   font-weight: 400;
 }
@@ -277,73 +278,6 @@ header h1 > span {
   top: -100px;
 }
 
-.icon-menu {
-    display: block;
-    width: 40px;
-    height: 36px;
-    position: relative;
-    cursor: pointer;
-}
-.icon-menu div {
-    position: absolute;
-    height: 3px;
-    border-radius: 2px;
-    background: white;
-    transition: width 0.2s ease 0.2s, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6);
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6);
-}
-.icon-menu input {
-    display: none;
-}
-.icon-menu input + div {
-    top: 50%;
-    left: 0;
-    margin: -2px 0 0 0;
-    width: 40px;
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-}
-.icon-menu input + div + div {
-    top: 2px;
-    left: 0;
-    width: 20px;
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-}
-.icon-menu input + div + div + div {
-    bottom: 2px;
-    right: 0;
-    width: 28px;
-    -webkit-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-    -webkit-transform: translate(-12px, 0);
-    transform: translate(-12px, 0);
-}
-.icon-menu input:checked + div {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    transition: -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-}
-.icon-menu input:checked + div + div {
-    width: 21px;
-    -webkit-transform: translate(6px, 0) rotate(45deg);
-    transform: translate(6px, 0) rotate(45deg);
-    transition: width 0.2s ease, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-}
-.icon-menu input:checked + div + div + div {
-    width: 21px;
-    -webkit-transform: translate(-5px, 0) rotate(45deg);
-    transform: translate(-5px, 0) rotate(45deg);
-    transition: width 0.2s ease, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-}
-
 /* 모바일 오버레이 */
 .overlay-m {
   width: 100vw;
@@ -352,7 +286,8 @@ header h1 > span {
   left: 0;
   top: 0;
   background-color: #050505;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .inner-m {
   margin: 0 auto;
