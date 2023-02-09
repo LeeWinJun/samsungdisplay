@@ -1,32 +1,37 @@
-let toggle = $('#openmenubtn');
-let overlay = $('.overlay-menu');
-let openMobileMenu = $('.overlay-m');
-let closeBtn = $('.close-btn');
+let toggle = $("#openmenubtn");
+let overlay = $(".overlay-menu");
+let openMobileMenu = $(".overlay-m");
+let closeBtn = $(".close-btn");
+let $window = $(window);
 
-if ($(window).width() <= 768) {
-  toggle.on('click', function() {
-    if (toggle.prop('checked')) {
-      openMobileMenu.css({
-        'opacity': '1',
-        'visibility': 'visible'
-      });
+$window.resize(function () {
+    if ($window.width() <= 768) {
+        toggle.on("click", function () {
+            if (toggle.prop("checked")) {
+                openMobileMenu.css({
+                    opacity: "1",
+                    visibility: "visible",
+                });
+            } else {
+                openMobileMenu.css({
+                    opacity: "0",
+                    visibility: "hidden",
+                });
+            }
+        });
     } else {
-      openMobileMenu.css({
-        'opacity': '0',
-        'visibility': 'hidden'
-      });
+        toggle.on("click", function () {
+            if (toggle.prop("checked")) {
+                overlay.addClass("active");
+                console.log("1");
+            } else {
+                overlay.removeClass("active");
+            }
+        });
     }
-  });
-} else {
-  toggle.on('click', function() {
-    if (toggle.prop('checked')) {
-      overlay.addClass('active');
-      console.log('1');
-    } else {
-      overlay.removeClass('active');
-    }
-  });
-}
+});
+
+$window.trigger("resize");
 
 //header scroll
 let lastScrollTop = 0;
@@ -45,7 +50,6 @@ $(window).scroll(function () {
 /* ----- GO TO TOP ----- */
 
 let $btt = $("#go-top");
-let $window = $(window);
 
 $btt.hide();
 
