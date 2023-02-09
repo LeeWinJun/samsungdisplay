@@ -14,7 +14,7 @@ p {
 ::-webkit-scrollbar {
   display: none;
 }
-img{
+img {
   width: 100%;
 }
 body {
@@ -41,10 +41,14 @@ body.scroll-none {
   position: absolute;
   height: 3px;
   border-radius: 2px;
-  background: #333;
-  transition: width 0.2s ease 0.2s, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6);
-  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s;
-  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6);
+  background: #fff;
+  transition: width 0.2s ease 0.2s,
+    -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6);
+  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6),
+    width 0.2s ease 0.2s;
+  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6),
+    width 0.2s ease 0.2s,
+    -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6);
 }
 .icon-menu input {
   display: none;
@@ -55,51 +59,60 @@ body.scroll-none {
   margin: -2px 0 0 0;
   width: 40px;
   -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 .icon-menu input + div + div {
   top: 2px;
   left: 0;
   width: 20px;
   -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
+  transform-origin: 0 50%;
 }
 .icon-menu input + div + div + div {
   bottom: 2px;
   right: 0;
   width: 28px;
   -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
   -webkit-transform: translate(-12px, 0);
-          transform: translate(-12px, 0);
+  transform: translate(-12px, 0);
 }
 .icon-menu input:checked + div {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   transition: -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
   transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
+  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
+    -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
 }
 .icon-menu input:checked + div + div {
   width: 21px;
   -webkit-transform: translate(6px, 0) rotate(45deg);
-          transform: translate(6px, 0) rotate(45deg);
-  transition: width 0.2s ease, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
-  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
+  transform: translate(6px, 0) rotate(45deg);
+  transition: width 0.2s ease,
+    -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
+  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
+    width 0.2s ease;
+  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
+    width 0.2s ease,
+    -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
 }
 .icon-menu input:checked + div + div + div {
   width: 21px;
   -webkit-transform: translate(-5px, 0) rotate(45deg);
-          transform: translate(-5px, 0) rotate(45deg);
-  transition: width 0.2s ease, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
-  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
+  transform: translate(-5px, 0) rotate(45deg);
+  transition: width 0.2s ease,
+    -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
+  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
+    width 0.2s ease;
+  transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
+    width 0.2s ease,
+    -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
 }
-#go-top{
+#go-top {
   opacity: 0;
 }
-#go-top.on{
+#go-top.on {
   opacity: 1;
   cursor: pointer;
   bottom: 10%;
@@ -723,7 +736,6 @@ address div {
   left: 0;
   top: 0;
   background-color: #050505;
-  display: none;
 }
 .inner-m {
   margin: 0 auto;
@@ -1133,10 +1145,9 @@ address div {
   .sub-title {
     display: none;
   }
- 
 }
-@media  screen and (max-width:1070px) {
-  .grid-desc{
+@media screen and (max-width: 1070px) {
+  .grid-desc {
     font-size: 16px;
   }
 }
