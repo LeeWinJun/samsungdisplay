@@ -1,8 +1,13 @@
 AOS.init();
-var s = skrollr.init();
+var s = skrollr.init({
+  skrollrBody: "skrollr-body",
+});
+
+if (window.innerWidth < 800) {
+  s.destroy();
+}
 
 // 변수
-let $window = $(window);
 let expression = $(".key_expression");
 let Video = $(".key_expression video");
 let expressionTop = expression.offset().top - 500;
@@ -17,24 +22,7 @@ let folderbleTop = folderble.offset().top - 500;
 let foldingItem = $(".folding-img-item");
 let excuted = false;
 
-//overlay menu
-let menuBtn = document.querySelector(".menu-btn"),
-  closeBtn = document.querySelector(".close-btn"),
-  overlayMenu = document.querySelector(".overlay-menu"),
-  bodyScrollNone = document.querySelector("body");
-
-menuBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  overlayMenu.classList.add("active");
-  bodyScrollNone.classList.add("scroll-none");
-});
-
-closeBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  overlayMenu.classList.remove("active");
-  bodyScrollNone.classList.remove("scroll-none");
-});
-
+//TECH SCROLL EVENT
 $window.scroll(function () {
   let scrollAmt = $window.scrollTop();
   // orange video section
@@ -56,9 +44,9 @@ $window.scroll(function () {
     oledItem.filter(".nth-1").stop().animate({ left: "204px" }, 500);
     oledItem.find("p").css({ opacity: "1" });
   } else {
-    oledItem.filter(".nth-3").stop().animate({ left: "25%" }, 500);
-    oledItem.filter(".nth-2").stop().animate({ left: "50%" }, 500);
-    oledItem.filter(".nth-1").stop().animate({ left: "75%" }, 500);
+    oledItem.filter(".nth-3").stop().animate({ left: "2px" }, 500);
+    oledItem.filter(".nth-2").stop().animate({ left: "4px" }, 500);
+    oledItem.filter(".nth-1").stop().animate({ left: "6px" }, 500);
     oledItem.find("p").css({ opacity: "0" });
   }
   // Darkmode section_from white to black
