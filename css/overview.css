@@ -3,6 +3,10 @@ header .inner-2 p,
 header .inner-2 a {
   color: #fff;
 }
+/* FOOTET */
+footer {
+  background: #fff;
+}
 .title_info {
   display: flex;
   flex-direction: row;
