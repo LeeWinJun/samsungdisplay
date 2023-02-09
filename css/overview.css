@@ -3,6 +3,9 @@ header .inner-2 p,
 header .inner-2 a {
   color: #fff;
 }
+img {
+  width: 100%;
+}
 /* FOOTET */
 footer {
   background: #fff;
