@@ -802,7 +802,7 @@ footer {
   }
   .flex {
     height: 1200px;
-    overflow: none;
+    overflow: hidden;
   }
   .flex_list_left {
     left: -17%;
