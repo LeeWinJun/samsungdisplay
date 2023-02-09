@@ -4,9 +4,6 @@ header,
 .menu_title a {
   color: #fff;
 }
-footer {
-  background: #fff;
-}
 /* BANNER */
 body {
   overflow-x: hidden;
@@ -90,6 +87,9 @@ body {
 .sub_title,
 .description {
   font-size: 32px;
+}
+img {
+  width: 100%;
 }
 
 /* SELF LUMINOUS 자발광 */
