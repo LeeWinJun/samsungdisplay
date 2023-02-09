@@ -35,80 +35,29 @@ inquireBtn.click(function () {
   }
 });
 
-//overlay menu
-let menuBtn = document.querySelector(".menu-btn"),
-  closeBtn = document.querySelector(".close-btn"),
-  overlayMenu = document.querySelector(".overlay-menu"),
-  bodyScrollNone = document.querySelector("body");
-
-menuBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  overlayMenu.classList.add("active");
-  bodyScrollNone.classList.add("scroll-none");
-});
-
-closeBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  overlayMenu.classList.remove("active");
-  bodyScrollNone.classList.remove("scroll-none");
-});
-
-//header scroll
-let lastScrollTop = 0;
-$(window).scroll(function () {
-  let scrollTop = $(this).scrollTop();
-  // Math.abs: 주어진 숫자의 절대값을 반환
-  if (Math.abs(lastScrollTop - scrollTop) <= 20) return;
-  if (scrollTop > lastScrollTop && lastScrollTop > 0) {
-    $("header").css({ top: "-110px" });
-  } else {
-    $("header").css({ top: "0px" });
-  }
-  lastScrollTop = scrollTop;
-});
-
-/* ----- GO TO TOP ----- */
-let $btt = $("#go-top");
-let $window = $(window);
-
-$btt.hide();
+//header color change
+let offsetTop = $(".service").offset().top;
+header = $("header");
+menuText_1 = header.find($(".menu_title p"));
+menuText_2 = header.find($(".menu_title a"));
+function bannerWhite() {
+  $(".sub-title").css({ color: "#fff" });
+  header.css({ color: "#fff" });
+  menuText_1.css({ color: "#fff" });
+  menuText_2.css({ color: "#fff" });
+}
+bannerWhite();
 
 $window.scroll(function () {
-  let scrollAmt = $(this).scrollTop();
-  console.log(scrollAmt);
-  scrollAmt > 300 ? $btt.fadeIn() : $btt.fadeOut();
-
+  console.log(offsetTop);
+  console.log($(this).scrollTop());
   //header color change
-  header = $("header");
-  menuText_1 = header.find($(".menu_title p"));
-  menuText_2 = header.find($(".menu_title a"));
-  if (window.pageYOffset >= 500) {
+  if ($(this).scrollTop() >= offsetTop) {
     $(".sub-title").css({ color: "#333" });
     header.css({ color: "#333" });
     menuText_1.css({ color: "#333" });
     menuText_2.css({ color: "#333" });
   } else {
-    $(".sub-title").css({ color: "#fff" });
-    header.css({ color: "#fff" });
-    menuText_1.css({ color: "#fff" });
-    menuText_2.css({ color: "#fff" });
+    bannerWhite();
   }
-  if (matchMedia("screen and (max-width: 768px)").matches) {
-    if (window.pageYOffset >= 200) {
-      $(".sub-title").css({ color: "#333" });
-      header.css({ color: "#333" });
-      menuText_1.css({ color: "#333" });
-      menuText_2.css({ color: "#333" });
-    } else {
-      $(".sub-title").css({ color: "#fff" });
-      header.css({ color: "#fff" });
-      menuText_1.css({ color: "#fff" });
-      menuText_2.css({ color: "#fff" });
-    }
-  }
-});
-
-$btt.click(function (e) {
-  e.preventDefault();
-  $("html, body").animate({ scrollTop: 0 }, 700, "easeInOutCubic");
 });

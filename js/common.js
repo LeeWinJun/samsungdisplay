@@ -21,7 +21,7 @@ menuBtn.addEventListener("click", (e) => {
   } else {
     overlayMenu.classList.add("active");
     bodyScrollNone.classList.add("scroll-none");
-    $("header .menu_title > *").css({ width: "18%" });
+    // $("header .menu_title > *").css({ width: "18%" });
   }
 });
 
