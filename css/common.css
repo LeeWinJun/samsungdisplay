@@ -225,7 +225,12 @@ header {
   border-radius: 1px;
   margin: 0 0 8px 7px;
 }
-.overlay-menu-sub-list li a {
+.overlay-menu-sub-list > li > a {
+  padding: 20px 0;
+  display: block;
+  font-weight: 400;
+}
+.overlay-m-menu-list li > a {
   padding: 20px;
   display: block;
   font-weight: 400;
