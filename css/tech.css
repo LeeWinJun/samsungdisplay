@@ -1,7 +1,9 @@
 /* HEADER */
-/* section {
-  overflow: hidden;
-} */
+header,
+.menu_title p,
+.menu_title a {
+  color: #fff;
+}
 /* BANNER */
 body {
   overflow-x: hidden;
@@ -234,7 +236,7 @@ body {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 180vh;
+  height: 150vh;
   background: url(../images/img_darkmode_bg.png) no-repeat center center/cover;
 }
 .darkmode .description {
@@ -362,7 +364,7 @@ body {
 }
 .flex_list_left ul li img,
 .flex_list_right ul li img {
-  width: auto;
+  width: 80%;
 }
 .flex_list_left ul li p,
 .flex_list_right ul li p {
@@ -480,7 +482,7 @@ footer {
   background: #fff;
 }
 
-/* 변수 */
+/* RESPONSIVE.CSS */
 @media screen and (max-width: 1420px) {
   :root {
     --fontsize-xlg: 3.75rem;
@@ -572,7 +574,7 @@ footer {
     height: 2400px;
   }
   .flex {
-    height: 700px;
+    height: 600px;
   }
   .flex_list_left ul li,
   .flex_list_right ul li {
@@ -580,7 +582,7 @@ footer {
   }
   .flex_device_box .flex_typo {
     font-size: 150px;
-    line-height: 500px;
+    line-height: 600px;
   }
   .flex_list_left ul li p,
   .flex_list_right ul li p {
@@ -600,6 +602,34 @@ footer {
   }
   .application .app_name {
     font-size: 32px;
+  }
+}
+@media (max-width: 1230px) {
+  .flexbox {
+    height: 1600px;
+  }
+  .flex {
+    height: 400px;
+  }
+  .flex_list_left ul li,
+  .flex_list_right ul li {
+    height: 400px;
+  }
+  .flex_list_left ul li img,
+  .flex_list_right ul li img {
+    width: 60%;
+  }
+  .flex_device_box .flex_typo {
+    font-size: 120px;
+    line-height: 400px;
+  }
+  .flex_list_left ul li p,
+  .flex_list_right ul li p {
+    font-size: 120px;
+  }
+  .flex_list_left ul li span,
+  .flex_list_right ul li span {
+    font-size: 80px;
   }
 }
 @media (max-width: 1023px) {
@@ -639,6 +669,7 @@ footer {
   }
   .about_oled {
     font-size: 17px;
+    margin-bottom: 0;
   }
   .self_luminous .oled_flex {
     flex-direction: column;
@@ -646,13 +677,15 @@ footer {
     gap: 50px;
   }
   .oled_panner {
-    width: 450px;
+    width: 400px;
   }
   .oled-layer-list {
-    left: -80px;
+    left: -30px;
+    transform: scale(0.8);
   }
   .layer-name-list {
     grid-template-columns: 9fr 1fr;
+    margin-top: 0;
   }
   .oled_desc {
     font-size: var(--description);
@@ -664,10 +697,11 @@ footer {
     padding-bottom: 200px;
   }
   .flicker_gif {
-    width: 100%;
+    width: 85%;
     align-items: center;
     flex-direction: column;
     gap: 50px;
+    margin: 0 auto;
   }
   .flicker figcaption p,
   .flicker_free figcaption p {
@@ -708,7 +742,6 @@ footer {
     margin-left: 15px;
     margin-top: -2px;
   }
-  /* FLEX DEVICE */
   /* APPLICATION */
   .application {
     padding-top: 200px;
@@ -753,7 +786,255 @@ footer {
     background-size: 333px 240px;
   }
 }
+@media (max-width: 950px) {
+  /* FOLDERBLE */
+  .folding-img-list {
+    padding-bottom: 0px;
+  }
+  /* FLEX DEVICE */
+  .flexbox {
+    height: 1200px;
+  }
+  .flex {
+    height: 1200px;
+    overflow: none;
+  }
+  .flex_list_left {
+    left: -17%;
+  }
+  .flex_list_right {
+    right: -8%;
+  }
+  .flex_list_left ul li,
+  .flex_list_right ul li {
+    height: 300px;
+  }
+  .flex_list_left ul li img,
+  .flex_list_right ul li img {
+    width: 50%;
+  }
+  .flex_device_box .flex_typo {
+    font-size: 100px;
+    line-height: 300px;
+  }
+  .flex_list_left ul li p,
+  .flex_list_right ul li p {
+    font-size: 100px;
+  }
+  .flex_list_left ul li span,
+  .flex_list_right ul li span {
+    font-size: 60px;
+  }
+}
 @media (max-width: 767px) {
+  :root {
+    --fontsize-xlg: 40px;
+    --main-title: 42px;
+    --subtitle: 20px;
+    --description: 20px;
+  }
+  /* SAMSUNG DISPLAY - KEY WORD SECTION */
+  .samsung_display {
+    height: 80vh;
+  }
+  /* KEY EXPRESSION SECTION with VIDEO */
+  .key_expression ul .color_white {
+    font-size: var(--fontsize-xlg);
+  }
+  .key_expression ul .color_white:nth-child(4) {
+    opacity: 1;
+  }
+  .key_expression video {
+    height: 70vh;
+  }
+  .key_expression div {
+    margin: 60vh auto;
+  }
+  /* section의 공통 사항들*/
+  .main_title {
+    font-size: var(--main-title);
+    margin-bottom: 10px;
+  }
+  .sub_title {
+    font-size: var(--subtitle);
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: var(--description);
+    margin-bottom: 50px;
+    width: 90%;
+  }
+  /* APPLICATION */
+  .application .app_top,
+  .application .app_bottom {
+    gap: 20px;
+  }
+  .application .app_top {
+    margin-bottom: 20px;
+  }
+  .application .app_name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .application .readmore {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 630px) {
+  /* DARKMODE */
+  .darkmode {
+    height: 115vh;
+  }
+  .darkmode-desc-wrap {
+    bottom: 43%;
+  }
+  .darkmode-desc-box > p {
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  .darkmode-desc-box > p .small {
+    font-size: 17px;
+  }
+  .darkmode-desc-group figure {
+    width: 50%;
+    margin-top: 0;
+  }
+  /* FOLDERBLE */
+  .folding-img-list {
+    height: 80vh;
+  }
+  /* FLEX DEVICE */
+  .flexbox {
+    height: 800px;
+  }
+  .flex {
+    height: 800px;
+  }
+  .flex_list_left {
+    left: -30%;
+  }
+  .flex_list_right {
+    right: -20%;
+  }
+  .flex_list_left ul li,
+  .flex_list_right ul li {
+    height: 200px;
+  }
+  .flex_list_left ul li img,
+  .flex_list_right ul li img {
+    width: 30%;
+  }
+  .flex_device_box .flex_typo {
+    font-size: 60px;
+    line-height: 200px;
+  }
+  .flex_list_left ul li p,
+  .flex_list_right ul li p {
+    font-size: 60px;
+  }
+  .flex_list_left ul li span,
+  .flex_list_right ul li span {
+    font-size: 25px;
+  }
+  /* APPLICATION */
+  .application {
+    padding-bottom: 200px;
+  }
+  .application .title {
+    font-size: 30px;
+  }
+  .application .app_top,
+  .application .app_bottom {
+    gap: 20px;
+  }
+  .application .app_top {
+    margin-bottom: 20px;
+  }
+  .application .app_name {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .application .readmore {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .application .big_box {
+    width: 392px;
+    height: 181px;
+  }
+  .application .small_box {
+    width: 287px;
+    height: 181px;
+  }
+  .application .img_automotive {
+    background-size: 392px 181px;
+  }
+  .application .img_mobile {
+    background-size: 184px 181px;
+  }
+  .application .img_tablet {
+    background-size: 182px 127px;
+  }
+  .application .img_laptop {
+    background-size: 229px 165px;
+  }
+  .application .img_automotive:hover {
+    background-size: 431px 199px;
+  }
+  .application .img_mobile:hover {
+    background-size: 202px 199px;
+  }
+  .application .img_tablet:hover {
+    background-size: 200px 139px;
+  }
+  .application .img_laptop:hover {
+    background-size: 251px 181px;
+  }
 }
 @media (max-width: 500px) {
+  :root {
+    --fontsize-xlg: 35px;
+    --main-title: 42px;
+    --subtitle: 17px;
+    --description: 17px;
+  }
+  /* 자발광 */
+  .layer-name-list {
+    grid-template-columns: 7fr 3fr;
+  }
+  .layer-name {
+    font-size: 12px;
+  }
+  /* FLICKER */
+  .flicker_free_section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .flicker_gif {
+    width: 80%;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin: 0 auto;
+  }
+  .flicker figcaption p,
+  .flicker_free figcaption p {
+    font-size: 25px;
+  }
+  .flicker figcaption span,
+  .flicker_free figcaption span {
+    font-size: 17px;
+  }
+  /* FOLDERBLE */
+  .folderble {
+    padding-bottom: 0px;
+  }
+  .folding-img-list .folding-img-item {
+    top: 100px;
+  }
 }
