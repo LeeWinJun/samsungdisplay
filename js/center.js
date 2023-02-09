@@ -47,6 +47,7 @@ centerWarp.each(function () {
 
 
 /* ----- MAP-LOAD ----- */
+
 let maps = [];
 let markers = [];
 
@@ -76,6 +77,7 @@ function initMap() {
 
 
 /* ----- header scroll ----- */
+
 let offsetTop = $('#tab-content').offset().top;
 header = $("header");
 menuText_1 = header.find($(".menu_title p"));
