@@ -28,7 +28,9 @@ body {
   background: #fff;
   color: #333;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 .s1 {
   font-size: 3.6458vw;
 }
