@@ -87,23 +87,27 @@ navPrev.click(function (e) {
 });
 
 //자동 슬라이드
-function startAutoSlide() {
-    if (timer == undefined) {
+function startAutoSlide(time) {
+    if (timer == 0) {
         timer = setInterval(function () {
             let ni = (currentIdx + 1) % slideCount;
             gotoSlide(ni);
-        }, 5000);
+        }, time);
     }
 }
-startAutoSlide();
+startAutoSlide(5000);
 
 sliderWrapper.mouseenter(function () {
-    clearInterval(timer);
-    timer = undefined;
+    stopAutoSlide();
 });
 sliderWrapper.mouseleave(function () {
-    startAutoSlide();
+    startAutoSlide(5000);
 });
+
+function stopAutoSlide(){
+    clearInterval(timer);
+    timer = 0;
+}
 
 
 /* ----- TAB ----- */
