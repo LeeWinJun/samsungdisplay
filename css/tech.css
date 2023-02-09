@@ -10,7 +10,8 @@ body {
   background-color: black;
 }
 .banner {
-  background: url(../images/bg_OLED_DISPLAY.jpg) no-repeat center center/cover;
+  background: url(../images/tech/bg_OLED_DISPLAY.jpg) no-repeat center
+    center/cover;
 }
 /* SAMSUNG DISPLAY - KEY WORD SECTION */
 .samsung_display {
@@ -240,7 +241,8 @@ img {
   position: relative;
   width: 100%;
   height: 150vh;
-  background: url(../images/img_darkmode_bg.png) no-repeat center center/cover;
+  background: url(../images/tech/img_darkmode_bg.png) no-repeat center
+    center/cover;
 }
 .darkmode .description {
   margin-bottom: 200px;
@@ -449,22 +451,22 @@ img {
   margin-left: 10px;
 }
 .application .img_automotive {
-  background: url(../images/automotive.png) no-repeat center center;
+  background: url(../images/tech/automotive.png) no-repeat center center;
   background-size: 803px 370px;
   transition: 0.3s;
 }
 .application .img_mobile {
-  background: url(../images/mobile.png) no-repeat right center;
+  background: url(../images/tech/mobile.png) no-repeat right center;
   background-size: 377px 370px;
   transition: 0.3s;
 }
 .application .img_tablet {
-  background: url(../images/galaxytab.png) no-repeat right center;
+  background: url(../images/tech/galaxytab.png) no-repeat right center;
   background-size: 374px 260px;
   transition: 0.3s;
 }
 .application .img_laptop {
-  background: url(../images/laptop.png) no-repeat right center;
+  background: url(../images/tech/laptop.png) no-repeat right center;
   background-size: 469px 339px;
   transition: 0.3s;
 }
