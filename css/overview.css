@@ -372,7 +372,7 @@ figure {
   height: 9.375vw;
 }
 .modal-02 img {
-  width: 10.8854;
+  width: 10.8854vw;
   height: 12.5vw;
 }
 .modal-03 img {
@@ -845,9 +845,6 @@ figure {
 .vision_img {
     margin-top: 100px;
 }
-  .about_sm {
-    mask-origin: 0;
-  }
   .title .sub_title {
     margin-top: 10px;
   }
