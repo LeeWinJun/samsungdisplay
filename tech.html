@@ -23,11 +23,76 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/tech.css" />
   </head>
-  <body>
-    <header>
+  <body id="skrollr-body">
+    <!-- HEADER -->
+    <header class="active">
+      <div class="overlay-m">
+        <div class="inner-m">
+          <div class="overlay-m-t">
+            <h1 class="m-logo">
+              <a href="#"><span>SAMSUNG</span>DISPLAY</a>
+            </h1>
+            <a href="" class="close-m-btn">close</a>
+          </div>
+          <ul class="overlay-m-menu-list">
+            <li>
+              <a href="#">기업정보</a>
+              <ul class="overlay-menu-sub-list">
+                <li><a href="overview.html">기업 개요</a></li>
+                <li><a href="#">SDC Culture</a></li>
+                <li><a href="#">CEO 인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="center.html">사업장 정보</a></li>
+                <li><a href="#">전자공고</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">제품기술 </a>
+              <ul class="overlay-menu-sub-list">
+                <li><a href="tech.html">oled display</a></li>
+                <li><a href="#">qd-oled</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">지속가능경영</a>
+              <ul class="overlay-menu-sub-list">
+                <li><a href="#">지속가능경영전략</a></li>
+                <li><a href="#">지속가능경영보고서</a></li>
+                <li><a href="#">인권정책/준법경영 </a></li>
+                <li><a href="#">사회공헌/상생협력</a></li>
+                <li><a href="#">녹색경영</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">미디어센터</a>
+              <ul class="overlay-menu-sub-list">
+                <li><a href="news.html">news</a></li>
+                <li><a href="#">social media</a></li>
+                <li><a href="#">영상</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">인재/채용</a>
+              <ul class="overlay-menu-sub-list">
+                <li><a href="#">인재상</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">직무소개</a></li>
+                <li><a href="#">회사생활</a></li>
+              </ul>
+            </li>
+            <li class="none-arrow"><a href="service.html">고객지원</a></li>
+          </ul>
+          <ul class="m-lang">
+            <li><a href="#">KO</a></li>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">CH</a></li>
+            <li><a href="#">VI</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="overlay-menu">
         <div class="overlay-top">
-          <div class="inner-2">
+          <div class="inner-2 menu_title">
             <h1 class="overlay-logo">SAMSUNG <span>DISPLAY</span></h1>
             <div class="overlay-top-right">
               <ul class="lang">
@@ -89,10 +154,10 @@
           <li><a href="service.html">고객지원</a></li>
         </ul>
       </div>
-      <div class="inner-2">
+      <div class="inner-2 menu_title">
         <p class="sub-title">THE FUTURE OF DISPLAY</p>
         <h1 class="logo">
-          <a href="index.html"> SAMSUNG<span>DISPLAY</span> </a>
+          <a href="#"> SAMSUNG<span>DISPLAY</span> </a>
         </h1>
         <p class="menu-icon"><a href="#" class="menu-btn">MENU</a></p>
       </div>
@@ -132,7 +197,6 @@
 
     <section class="key_expression">
       <video src="./images/orange.mp4" loop muted></video>
-      <!-- <div><img src="./img/오렌지.jpg" alt="" class="orange"></div> -->
       <div class="inner">
         <ul>
           <li
@@ -447,7 +511,7 @@
         <div class="flex">
           <div
             class="flex_list_left"
-            data-11000="bottom:0"
+            data-11000="bottom:0px"
             data-11200="bottom:-700px"
             data-12400="bottom:-1400px"
             data-12600="bottom:-2100px"
@@ -552,6 +616,14 @@
       </div>
     </section>
 
+    <!-- TOP BUTTON -->
+    <div id="go-top">
+      <i class="fa-solid fa-arrow-up-long"></i>
+      <span>top</span>
+      <div class="go-to-color"></div>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
       <div class="inner">
         <div class="footer">
@@ -751,6 +823,7 @@
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/skrollr.min.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/tech.js"></script>
   </body>
 </html>
