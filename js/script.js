@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
 let toggle = document.querySelector('#openmenubtn');
 
 let overlay = document.querySelector(".overlay-menu");
@@ -8,6 +7,7 @@ let openMobileMenu = document.querySelector('.overlay-m');
 let closeBtn = document.querySelector(".close-btn");
 
 var event2 = new Event('resize');
+
 window.addEventListener('resize',()=>{
   
   if (window.matchMedia("(max-width: 768px)").matches) {
