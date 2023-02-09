@@ -101,7 +101,6 @@
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/service_inquire.css" />
   </head>
   <body>
@@ -181,7 +180,6 @@
                 <li><a href="#">CH</a></li>
                 <li><a href="#">VI</a></li>
               </ul>
-              <a class="close-btn" href="#">close</a>
             </div>
           </div>
         </div>
@@ -240,10 +238,10 @@
           <a href="index.html"> SAMSUNG<span>DISPLAY</span> </a>
         </h1>
         <label class="icon-menu" for="openmenubtn">
-          <input type="checkbox" id="openmenubtn">
-            <div></div>
-            <div></div>
-            <div></div>
+          <input type="checkbox" id="openmenubtn" />
+          <div></div>
+          <div></div>
+          <div></div>
         </label>
       </div>
     </header>
@@ -253,6 +251,7 @@
         <h2 class="s2">문의하기</h2>
         <img src="./images/service_inquire.svg" alt="" />
       </div>
+      <p class="required">* : 필수항목입니다.</p>
       <form action="./php/insert.php" method="post">
         <input type="hidden" id="type" name="type" />
         <div class="inq_customer_info">
