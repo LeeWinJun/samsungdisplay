@@ -29,32 +29,3 @@ inquireBtn.click(function () {
     $("#agreeMsg").css({ visibility: "visible" }); //alert 대신!
   }
 });
-
-//header color change
-let offsetTop1 = $(".service").offset().top;
-header = $("header");
-menuText_1 = header.find($(".menu_title p"));
-menuText_2 = header.find($(".menu_title a"));
-function bannerWhite() {
-  $(".icon-menu div").css({ background: "#fff" });
-  $(".sub-title").css({ color: "#fff" });
-  header.css({ color: "#fff" });
-  menuText_1.css({ color: "#fff" });
-  menuText_2.css({ color: "#fff" });
-}
-bannerWhite();
-
-$window.scroll(function () {
-  console.log(offsetTop1);
-  console.log($(this).scrollTop());
-  //header color change
-  if ($(this).scrollTop() >= offsetTop1) {
-    $(".sub-title").css({ color: "#333" });
-    $(".icon-menu div").css({ background: "#333" });
-    header.css({ color: "#333" });
-    menuText_1.css({ color: "#333" });
-    menuText_2.css({ color: "#333" });
-  } else {
-    bannerWhite();
-  }
-});
