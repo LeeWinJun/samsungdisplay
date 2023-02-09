@@ -24,7 +24,6 @@
 }
 
 /* 지도 이미지 */
-
 .map_img {
     position: relative;
 }
@@ -42,6 +41,7 @@
     visibility: visible;
     opacity: 1;
 }
+
 /* TAB MENU */
 .tab-wrapper {
     position: relative;
@@ -72,7 +72,8 @@
     width: 152px;
     cursor: pointer;
 }
-/* .tab-menu li 에 active 들어오면 색 변화 */
+
+/* .tab-menu li active 효과 */
 .tab-menu li.active > div {
     border: 2px solid var(--highlight-color);
 }
@@ -146,11 +147,13 @@
 }
 .center_accordion li .center_name {
     position: relative;
+
 }
 .center_accordion li h4 {
     font-size: var(--fontsize-lg);
     line-height: var(--lineheight-lg);
     margin-bottom: 15px;
+    transition: 0.5s;
 }
 .center_accordion li p {
     font-size: var(--fontsize-sm);
@@ -158,6 +161,7 @@
     font-weight: 400;
     color: #a9a9a9;
     margin-bottom: 5px;
+    transition: 0.5s;
 }
 .center_accordion li p:last-child {
     margin-bottom: 0;
@@ -170,9 +174,15 @@
     display: block;
     transition: 0.5s;
 }
-/* .center_name 에 active 들어오면 화살표 방향 rotate */
+/* .center_name active 효과 */
 .center_name.active i {
     transform: rotate(180deg);
+}
+.center_name.active h4 {
+    color: var(--highlight-color);
+}
+.center_name.active p {
+    color: #333;
 }
 
 
