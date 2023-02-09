@@ -1,52 +1,56 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let toggle = document.querySelector('#openmenubtn');
+let toggle = document.querySelector("#openmenubtn");
 
 let overlay = document.querySelector(".overlay-menu");
-let openMobileMenu = document.querySelector('.overlay-m');
+let openMobileMenu = document.querySelector(".overlay-m");
 let closeBtn = document.querySelector(".close-btn");
 
-var event2 = new Event('resize');
+var event2 = new Event("resize");
 
-window.addEventListener('resize',()=>{
-  
+window.addEventListener("resize", () => {
   if (window.matchMedia("(max-width: 768px)").matches) {
-    toggle.addEventListener('click',()=>{
-      if(toggle.checked){
-        openMobileMenu.style.opacity = '1';
-        openMobileMenu.style.visibility = 'visible';
-      }else{
-        openMobileMenu.style.opacity = '0';
-        openMobileMenu.style.visibility = 'hidden';
+    toggle.addEventListener("click", () => {
+      if (toggle.checked) {
+        openMobileMenu.style.opacity = "1";
+        openMobileMenu.style.visibility = "visible";
+      } else {
+        openMobileMenu.style.opacity = "0";
+        openMobileMenu.style.visibility = "hidden";
       }
-    })
-  }else{
-    toggle.addEventListener('click',()=>{
-      if(toggle.checked){
+    });
+  } else {
+    toggle.addEventListener("click", () => {
+      if (toggle.checked) {
         overlay.classList.add("active");
-        console.log('1');
-      }else{
+        console.log("1");
+      } else {
         overlay.classList.remove("active");
       }
     });
   }
 });
 
-
 window.dispatchEvent(event2);
 
 window.addEventListener("load", () => {
+  let headerBg = document.querySelector("header");
+  let headerBgA = document.querySelector(".h-bg-title a");
+  if (headerBg.classList.contains("h-bg")) {
+    headerBg.style.background = "rgba(0,0,0,0.5)";
+    headerBg.style.color = "#fff";
+    headerBgA.style.color = "#fff";
+  }
+});
+window.addEventListener("load", () => {
   let moveTitle = document.querySelectorAll(".number-one p");
   goal = document.querySelector(".l-sub-title");
-
-  console.log(moveTitle);
 
   for (let i = 0; i < moveTitle.length; i++) {
     let item = moveTitle[i];
     item.classList.add("active");
   }
   goal.classList.add("active");
-
 });
 function HorizontalScroll() {
   let targetEl = document.querySelector("#container");
@@ -96,7 +100,7 @@ function pcAnimation() {
   let samsungDisplay = document.querySelectorAll(".move-title span"),
     header = document.querySelector("header"),
     Logo = document.querySelector(".logo a"),
-    Menu = document.querySelector(".inner-2 .menu-icon > .menu-btn");
+    Menu = document.querySelectorAll(".menu-color");
   window.addEventListener("scroll", () => {
     console.log(window.pageYOffset);
     if (window.pageYOffset >= 810) {
@@ -106,15 +110,9 @@ function pcAnimation() {
       }
       document.querySelector("section").style.background = "#050505";
       document.querySelector(".change-txt").style.background = "#050505";
-      header.style.color = "#fff";
-      Logo.style.color = "#fff";
-      Menu.style.color = "#fff";
     } else {
       document.querySelector("section").style.background = "#fff";
       document.querySelector(".change-txt").style.background = "#fff";
-      header.style.color = "#333";
-      Logo.style.color = "#333";
-      Menu.style.color = "#333";
     }
 
     if (window.pageYOffset >= 1600) {
@@ -215,32 +213,27 @@ tabItem.forEach((tab, idx) => {
 // });
 
 let lastScrollTop = 0;
-$(window).scroll(function() {
-let scrollTop = $(this).scrollTop();
-if (Math.abs(lastScrollTop - scrollTop) <= 10) return;
-if (scrollTop > lastScrollTop && lastScrollTop > 0) {
-$("header").css({ top: "-110px" });
-} else {
-$("header").css({ top: "0px" });
-}
-lastScrollTop = scrollTop;
+$(window).scroll(function () {
+  let scrollTop = $(this).scrollTop();
+  if (Math.abs(lastScrollTop - scrollTop) <= 10) return;
+  if (scrollTop > lastScrollTop && lastScrollTop > 0) {
+    $("header").css({ top: "-110px" });
+  } else {
+    $("header").css({ top: "0px" });
+  }
+  lastScrollTop = scrollTop;
 });
 
-
-
-$(window).scroll(function(){
-    
-  if( $(this).scrollTop() > 100 ){
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 100) {
     $("#go-top").addClass("on");
-  }
-  else{
+  } else {
     $("#go-top").removeClass("on");
   }
-  
 });
-  
-$("#go-top").click(function(){
-window.scrollTo({top : 0, behavior: 'smooth'}); 
+
+$("#go-top").click(function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 /* cirlce */
 
@@ -311,5 +304,3 @@ buttons.forEach(function (button, index) {
 //     setCookie("ABC", "home", -1);
 //   }
 // });
-
-
