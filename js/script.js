@@ -7,27 +7,33 @@ let overlay = document.querySelector(".overlay-menu");
 let openMobileMenu = document.querySelector('.overlay-m');
 let closeBtn = document.querySelector(".close-btn");
 
+var event2 = new Event('resize');
+window.addEventListener('resize',()=>{
+  
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    toggle.addEventListener('click',()=>{
+      if(toggle.checked){
+        openMobileMenu.style.opacity = '1';
+        openMobileMenu.style.visibility = 'visible';
+      }else{
+        openMobileMenu.style.opacity = '0';
+        openMobileMenu.style.visibility = 'hidden';
+      }
+    })
+  }else{
+    toggle.addEventListener('click',()=>{
+      if(toggle.checked){
+        overlay.classList.add("active");
+        console.log('1');
+      }else{
+        overlay.classList.remove("active");
+      }
+    });
+  }
+});
 
-if (window.matchMedia("(max-width: 768px)").matches) {
-  toggle.addEventListener('click',()=>{
-    if(toggle.checked){
-      openMobileMenu.style.opacity = '1';
-      openMobileMenu.style.visibility = 'visible';
-    }else{
-      openMobileMenu.style.opacity = '0';
-      openMobileMenu.style.visibility = 'hidden';
-    }
-  })
-}else{
-  toggle.addEventListener('click',()=>{
-    if(toggle.checked){
-      overlay.classList.add("active");
-      console.log('1');
-    }else{
-      overlay.classList.remove("active");
-    }
-  });
-}
+
+window.dispatchEvent(event2);
 
 window.addEventListener("load", () => {
   let moveTitle = document.querySelectorAll(".number-one p");
