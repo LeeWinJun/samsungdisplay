@@ -132,14 +132,19 @@ function pcAnimation() {
     if (window.pageYOffset >= 2520) {
       let foldableTxt = document.querySelector(".foldable-txt-box"),
         foldableTitle = document.querySelector(".foldable h2");
+      let foldableImg = document.querySelector(".foldable-img");
+
       foldableTitle.classList.add("active");
       foldableTxt.classList.add("active");
+      foldableImg.style.width = "52.0833vw";
     }
     if (window.pageYOffset >= 2700) {
       let wearalbeTxt = document.querySelector(".wearable-txt-box"),
         wearableTitle = document.querySelector(".wearable h2");
+      let wearableImg = document.querySelector(".wearable-img");
       wearableTitle.classList.add("active");
       wearalbeTxt.classList.add("active");
+      wearableImg.style.width = "26.25vw";
     }
     if (window.pageYOffset >= 3800) {
       let productTitle = document.querySelector(".product-title");
