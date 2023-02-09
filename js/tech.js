@@ -1,3 +1,4 @@
+// skrollr library
 AOS.init();
 var s = skrollr.init({
   skrollrBody: "skrollr-body",
@@ -35,8 +36,8 @@ $window.scroll(function () {
     Video.get(0).currentTime = 0;
   }
   // OLED panner layer
-  console.log("scrollAmt", scrollAmt);
-  console.log("oledFlexTop", oledFlexTop);
+  // console.log("scrollAmt", scrollAmt);
+  // console.log("oledFlexTop", oledFlexTop);
   if (scrollAmt > oledFlexTop) {
     console.log("true");
     oledItem.filter(".nth-3").stop().animate({ left: "68px" }, 500);
@@ -66,7 +67,7 @@ $window.scroll(function () {
   }
 });
 
-// folderble(함수)
+// folderble(function)
 function showFolding() {
   let i = 0;
   setInterval(() => {
