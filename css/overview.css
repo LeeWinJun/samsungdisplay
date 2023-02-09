@@ -42,6 +42,7 @@ h4.active {
   text-align: center;
   padding: 15.416vh 0;
   color: #fff;
+  font-weight: bold;
 }
 .about_wrap {
   position: fixed;
@@ -144,6 +145,7 @@ h4.active {
 table caption {
   text-align: left;
   margin-bottom: 5.55vh;
+  font-weight: bold;
 }
 th,
 td {
@@ -193,6 +195,7 @@ th {
 }
 .goal_vision .s3 {
   color: #fff;
+  font-weight: bold;
 }
 .goal_vision > p {
   width: 21.5vw;
@@ -301,7 +304,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: end;
-  transform: translateY(-21.2291vw);
+  transform: translateY(-14.2291vw);
 }
 .modal-btn {
   position: absolute;
