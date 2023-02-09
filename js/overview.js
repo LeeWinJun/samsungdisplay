@@ -6,9 +6,6 @@ $(".about_sm").css({ visibility: "hidden" });
 $("table").css({ visibility: "hidden" });
 
 $(window).scroll(function () {
-  // console.log(aboutImg.offset().top);
-  // console.log($(window).scrollTop());
-
   if ($(window).scrollTop() >= 600) {
     $(".about_sm").css({ visibility: "visible" });
   } else {
