@@ -510,6 +510,9 @@
   #tab-content section .article_list li {
     margin-bottom: 3vw;
   }
+  #tab-content section .article_list li:last-child {
+    margin-bottom: 20vw;
+  }
   .newsletter_title {
     align-items: flex-end;
     flex-wrap: wrap;
