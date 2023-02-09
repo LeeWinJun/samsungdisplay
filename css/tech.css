@@ -92,6 +92,9 @@ body {
 img {
   width: 100%;
 }
+.hidden{
+  display: none;
+}
 
 /* SELF LUMINOUS 자발광 */
 .self_luminous {
