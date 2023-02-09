@@ -178,7 +178,9 @@ tabContent.each(function () {
 
     //페이지 및 페이지네이션 배치
     function displayPage(num) {
-        numberBtn.hide(); //모든 페이지네이션 안보이도록
+        //모든 페이지네이션 안보이도록
+        pageActiveIdx = num;
+        numberBtn.hide();
         let totalPageCount = Math.ceil(pageCount / maxPageNum);
         let start = num * maxPageNum;
         let end = start + maxPageNum;
