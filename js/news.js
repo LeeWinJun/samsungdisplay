@@ -271,28 +271,3 @@ articleList.each(function () {
         $(this).parent("li").siblings().find(".article_title").removeClass("active");
     });
 });
-
-/* ----- HEADER SCROLL ----- */
-
-let offsetTop = $('.container').offset().top;
-header = $("header");
-menuText_1 = header.find($(".menu_title p"));
-menuText_2 = header.find($(".menu_title a"));
-function bannerWhite (){
-    $(".sub-title").css({ color: "#fff" });
-    header.css({ color: "#fff" });
-    menuText_1.css({ color: "#fff" });
-    menuText_2.css({ color: "#fff" });
-};
-bannerWhite();
-$window.scroll(function () {
-    //header color change
-    if ($(this).scrollTop() >= offsetTop) {
-      $(".sub-title").css({ color: "#333" });
-      header.css({ color: "#333" });
-      menuText_1.css({ color: "#333" });
-      menuText_2.css({ color: "#333" });
-    } else {
-        bannerWhite();
-    }
-  });
