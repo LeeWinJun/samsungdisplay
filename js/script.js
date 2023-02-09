@@ -1,12 +1,32 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
-let toggle = document.querySelector('.icon-menu input');
+let toggle = document.querySelector('#openmenubtn');
+
+let overlay = document.querySelector(".overlay-menu");
+let openMobileMenu = document.querySelector('.overlay-m');
+let closeBtn = document.querySelector(".close-btn");
 
 
-if(toggle.checked){
-  let overlay = document.querySelector(".overlay-menu");
-  overlay.classList.add("active");
+if (window.matchMedia("(max-width: 768px)").matches) {
+  toggle.addEventListener('click',()=>{
+    if(toggle.checked){
+      openMobileMenu.style.opacity = '1';
+      openMobileMenu.style.visibility = 'visible';
+    }else{
+      openMobileMenu.style.opacity = '0';
+      openMobileMenu.style.visibility = 'hidden';
+    }
+  })
+}else{
+  toggle.addEventListener('click',()=>{
+    if(toggle.checked){
+      overlay.classList.add("active");
+      console.log('1');
+    }else{
+      overlay.classList.remove("active");
+    }
+  });
 }
 
 window.addEventListener("load", () => {
