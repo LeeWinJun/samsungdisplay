@@ -209,7 +209,9 @@ input[type="checkbox"] {
   accent-color: #0c4da2;
   /* border: 1px solid #a9a9a9; */
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 @media screen and (max-width: 1420px) {
   .inner {
     width: 90.8vw;
@@ -217,7 +219,7 @@ input[type="checkbox"] {
 }
 @media (max-width: 1023px) {
   .service_title {
-    margin: 11.775vh 0;
+    padding: 11.775vh 0;
   }
   .main_t_wrap {
     flex-direction: column;
@@ -252,7 +254,7 @@ input[type="checkbox"] {
     font-size: 24px;
   }
   .service_title {
-    margin: 6.775vh 0;
+    padding: 6.775vh 0;
   }
   .service_info_anw {
     padding: 1.2em 2.2em 1em 2.2em;

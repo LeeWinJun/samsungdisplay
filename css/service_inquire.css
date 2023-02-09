@@ -266,7 +266,9 @@ input.warning::placeholder,
   color: red;
   font-style: italic;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 @media screen and (max-width: 1160px) {
 }
 @media screen and (max-width: 1023px) {
@@ -373,6 +375,10 @@ input.warning::placeholder,
   .inq_check h4 {
     margin-top: 0;
   }
+  .inq_customer_info_f input:focus,
+  .input_wrap input:focus{
+    border: 2px solid #0c4da2;
+  }
 
   .inq_check {
     margin-bottom: 30px;
@@ -432,5 +438,10 @@ input.warning::placeholder,
   .inq_title .required_mark i,
   .inq_content .required_mark i {
     top: 1.38rem;
+  }
+  @media screen and (max-width: 767px){
+    p {
+        width: 95%;
+      }
   }
 }

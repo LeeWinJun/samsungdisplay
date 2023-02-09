@@ -901,4 +901,16 @@ dialog {
     height: 50px;
     font-size: var(--fontsize-sm);
   }
+  footer ul li {
+    width: 100%;
+}
+footer ul li p {
+  text-align: left;
+}
+footer ul li .company_tt {
+  padding: 10px;
+}
+footer .company_num {
+  margin-bottom :0;
+}
 }
