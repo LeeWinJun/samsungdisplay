@@ -4,6 +4,16 @@ body {
   height: 100%;
   margin: 0;
 }
+.foldable-img {
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+.wearable-img {
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
 html body * .active {
   opacity: 1;
   transform: translate(0, 0);
@@ -357,9 +367,9 @@ section > div {
   justify-content: space-between;
 }
 
-.foldable img {
+/* .foldable img {
   width: 52.0833vw;
-}
+} */
 
 .foldable {
   position: relative;
@@ -413,7 +423,6 @@ section > div {
   transition: opacity 0.5s linear;
 }
 .wearable figure {
-  width: 26.25vw;
 }
 .wearable img {
   width: 100%;
