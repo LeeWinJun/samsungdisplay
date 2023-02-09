@@ -21,6 +21,15 @@
     color: #000;
     font-style: italic;
 }
+.read_more > i{
+    transition: 0.7s;
+}
+.read_more:hover > i{
+    transform: translateX(15px);
+}
+.point-color{
+    color: var(--highlight-color);
+}
 
 /* banner */
 
@@ -63,6 +72,13 @@
 .newsletter_desc .newsroom_link {
     font-size: var(--fontsize-md);
     line-height: var(--lineheight-md);
+    margin-right: 20px;
+}
+.newsletter_desc .newsroom_link > i{
+    transition: 0.7s;
+}
+.newsletter_desc .newsroom_link:hover > i{
+    transform: translateX(15px);
 }
 
 .slide-wrapper {
