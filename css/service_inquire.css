@@ -104,7 +104,11 @@ textarea,
   width: 100%;
   height: 70px;
 }
-
+.inq_customer_info_f input:focus,
+.inq_title input:focus,
+.inq_content textarea:focus{
+  border: #0c4da2 2px solid;
+}
 .inq_title,
 .inq_content,
 .inq_language_tab,
