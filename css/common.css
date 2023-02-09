@@ -288,7 +288,7 @@ header h1 > span {
     position: absolute;
     height: 3px;
     border-radius: 2px;
-    background: #333;
+    background: white;
     transition: width 0.2s ease 0.2s, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6);
     transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s;
     transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s, -webkit-transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6);
