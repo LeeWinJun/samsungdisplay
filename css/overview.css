@@ -465,9 +465,7 @@ figure {
   margin: 0;
   font-weight: 600;
 }
-.item-modal-wrap {
-  width: auto;
-}
+
 @media screen and (max-width: 1420px) {
   :root {
     --fontsize-xlg: 32px;
