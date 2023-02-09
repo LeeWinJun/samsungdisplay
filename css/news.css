@@ -263,7 +263,7 @@
     align-items: center;
     box-sizing: border-box;
     border: #a9a9a9 1px solid;
-    transition: border-color 1s;
+    transition: border-color 0.7s;
 }
 #tab-content section .article_title:hover {
     border: #0c4da2 3px solid;
@@ -305,7 +305,7 @@
     padding: 7px 8px;
     color: #fff;
     background: #a9a9a9;
-    transition: 1s;
+    transition: 0.7s;
 }
 #tab-content section .article_title:hover span i {
     background: #0c4da2;
