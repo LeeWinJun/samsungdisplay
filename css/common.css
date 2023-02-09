@@ -112,9 +112,7 @@ body {
   color: #333;
   /* background-color: #050505; */
 }
-body.scroll-none {
-  overflow: hidden;
-}
+
 .inner-2 {
   width: calc(100% - 6.25vw);
   margin: 0 auto;
@@ -140,8 +138,8 @@ header {
   padding: 30px 0;
 }
 .overlay-menu {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #050505;
   position: fixed;
   left: 0;
@@ -247,9 +245,9 @@ header .inner-2 .menu-icon {
 header .inner-2 h1 {
   text-align: center;
 }
-header .menu_title > * {
+/* header .menu_title > * {
   width: 30%;
-}
+} */
 header .inner-2 {
   display: flex;
   justify-content: space-between;
@@ -292,10 +290,8 @@ header h1 > span {
   left: 0;
   top: 0;
   background-color: #050505;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
-
 .inner-m {
   margin: 0 auto;
 }
@@ -455,6 +451,7 @@ header h1 > span {
   font-size: 17px;
   /* margin-top: 30px; */
 }
+
 footer .menu_md li:last-child {
   font-weight: bold;
 }
@@ -486,9 +483,7 @@ footer ul {
 footer ul li {
   list-style: none;
 }
-footer span {
-  color: #a9a9a9;
-}
+
 footer hr {
   margin: 30px 0;
   background: #a9a9a9;
@@ -496,24 +491,54 @@ footer hr {
   border: 0;
   width: 100%;
 }
-footer ul span {
-  margin: 0 10px;
-}
 footer .company_num {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   flex-wrap: wrap;
 }
-footer .company_num > span {
-  margin: 0 20px;
-}
-footer .company_num li {
-  text-transform: uppercase;
-}
+footer span {
+  color: #a9a9a9;
+} /*
+footer ul span {
+  margin: 0 10px;
+} 
+
 footer .company_num li span {
   margin: 0 10px;
   color: #333;
+}*/
+footer .company_num > span {
+  margin: 0 20px;
+}
+footer .menu_md .menu li:after {
+  content: "|";
+  width: 1px;
+  height: 17px;
+  color: #333;
+  margin: 0 10px;
+}
+footer .menu li:last-child:after {
+  display: none;
+}
+footer .company_num li:after {
+  content: "|";
+  width: 1px;
+  height: 17px;
+  color: #333;
+  margin: 0 10px;
+}
+footer .company_num .company_tt {
+  margin-right: 20px;
+}
+footer .company_num li:last-child:after {
+  display: none;
+}
+footer .company_num .company_tt:after {
+  display: none;
+}
+footer .company_num li {
+  text-transform: uppercase;
 }
 footer .company_tt {
   font-weight: bold;
