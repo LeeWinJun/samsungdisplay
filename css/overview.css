@@ -777,12 +777,12 @@ figure {
     height: 19.375vw;
   }
   .modal-02 img {
-    width: 27.8854vw;
+    width: 21.8854vw;
     height: 22.5vw;
   }
   .modal-03 img {
     width: 26.302vw;
-    height: 22.5vw;
+    height: 31.5vw;
   }
   .modal-04 img {
     width: 22.5vw;
@@ -794,13 +794,12 @@ figure {
   }
   .modal-06 img {
     width: 22.5vw;
-    height: 17.031vw;
+    height: 14.031vw;
   }
   .modal-07 img {
     width: 22.5vw;
-    height: 18.3333vw;
+    height: 15.3333vw;
   }
-}
 
 @media screen and (max-width: 560px) {
   .about_wrap {
