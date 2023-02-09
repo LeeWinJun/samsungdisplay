@@ -789,9 +789,17 @@ dialog {
   footer .menu_md .menu span {
     display: none;
   }
+  footer .menu_md .menu li:after {
+    display: none;
+  }
   dialog {
     left: -35vw;
     top: 12.78vh;
+  }
+}
+@media screen and (max-width: 795px) {
+  footer .menu_md .menu li {
+    width: 24%;
   }
 }
 @media screen and (max-width: 768px) {
