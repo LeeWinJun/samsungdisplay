@@ -504,6 +504,9 @@ figure {
   .goal_vision {
     height: 150px;
   }
+    .item-modal-wrap {
+    width: auto;
+  }
 }
 @media (max-width: 1023px) {
   .goal_vision_wrap {
