@@ -53,18 +53,4 @@ for (let i = 0; i < closeBtns.length; i++) {
   });
 }
 
-const buttons = document.querySelectorAll(".overlay-m-menu-list > li");
 
-buttons.forEach(function (button, index) {
-  button.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    this.childNodes[3].classList.toggle("on");
-    this.childNodes[1].classList.toggle("rotate");
-    buttons.forEach(function (button2, index2) {
-      if (index !== index2) {
-        button2.childNodes[3].classList.remove("on");
-      }
-    });
-  });
-});
