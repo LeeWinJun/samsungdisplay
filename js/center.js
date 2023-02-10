@@ -75,23 +75,27 @@ function initMap() {
 
 /* ----- header scroll ----- */
 
-let $offsetTop = $("#tab-content").offset().top;
+let $menuBlackArea = $("#tab-content").offset().top;
+console.log($menuBlackArea);
 header = $("header");
 menuText_1 = header.find($(".menu_title p"));
 menuText_2 = header.find($(".menu_title a"));
+let menuIcon = $('.icon-menu div');
 function bannerWhite() {
     $(".sub-title").css({ color: "#fff" });
     header.css({ color: "#fff" });
     menuText_1.css({ color: "#fff" });
     menuText_2.css({ color: "#fff" });
+    menuIcon.css({ background: "#fff" });
 }
 bannerWhite();
 $window.scroll(function () {
-    if ($(this).scrollTop() >= $offsetTop) {
+    if ($(this).scrollTop() >= $menuBlackArea) {
         $(".sub-title").css({ color: "#333" });
         header.css({ color: "#333" });
         menuText_1.css({ color: "#333" });
         menuText_2.css({ color: "#333" });
+        menuIcon.css({ background: "#333" });
         header.css({ background: "#fff" });
     } else {
         bannerWhite();
