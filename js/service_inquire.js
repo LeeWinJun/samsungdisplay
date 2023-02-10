@@ -90,14 +90,17 @@ $("#email").blur(function () {});
 header = $("header");
 menuText_1 = header.find($(".menu_title p"));
 menuText_2 = header.find($(".menu_title a"));
+menuIcon = $('.icon-menu div');
 function bannerWhite() {
   $(".sub-title").css({ color: "#333" });
   header.css({ color: "#333" });
   menuText_1.css({ color: "#333" });
   menuText_2.css({ color: "#333" });
-  // header.css({ background: "#fff" });
+  menuIcon.css({ background: "#333" });
+  header.css({ background: "#fff" });
 }
 bannerWhite();
+$window.scroll(bannerWhite);
 
 const buttons = document.querySelectorAll(".overlay-m-menu-list > li");
 
