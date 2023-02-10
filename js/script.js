@@ -261,11 +261,6 @@ const buttons = document.querySelectorAll(".overlay-m-menu-list > li");
 buttons.forEach(function (button, index) {
   button.addEventListener("click", function (e) {
     
-    let preventLoad = this.querySelector('a').getAttribute('href');
-    console.log(preventLoad);
-    if(preventLoad === '#'){
-      e.preventDefault();
-    }
     // e.preventDefault();
     //let buttonsNum = buttons[i];
 
