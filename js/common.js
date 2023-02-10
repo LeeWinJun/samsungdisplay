@@ -61,11 +61,13 @@ let offsetTop = $(".banner").innerHeight();
 header = $("header");
 menuText_1 = header.find($(".menu_title p"));
 menuText_2 = header.find($(".menu_title a"));
+menuIcon = $('.icon-menu div');
 function bannerWhite() {
     $(".sub-title").css({ color: "#fff" });
     header.css({ color: "#fff" });
     menuText_1.css({ color: "#fff" });
     menuText_2.css({ color: "#fff" });
+    menuIcon.css({ background: "#fff" });
 }
 bannerWhite();
 $window.scroll(function () {
@@ -76,12 +78,14 @@ $window.scroll(function () {
             header.css({ color: "#fff" });
             menuText_1.css({ color: "#fff" });
             menuText_2.css({ color: "#fff" });
+            menuIcon.css({ background: "#fff" });
             header.css({ background: "#000" });
         } else {
             $(".sub-title").css({ color: "#333" });
             header.css({ color: "#333" });
             menuText_1.css({ color: "#333" });
             menuText_2.css({ color: "#333" });
+            menuIcon.css({ background: "#333" });
             header.css({ background: "#fff" });
         }
     } else {
@@ -89,6 +93,8 @@ $window.scroll(function () {
         header.css({ background: "rgba(174, 174, 174, 0.2)" });
     }
 });
+
+$window.trigger("scroll");
 
 /* ----- GO TO TOP ----- */
 
