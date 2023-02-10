@@ -35,16 +35,6 @@ window.addEventListener("resize", () => {
 
 window.dispatchEvent(event2);
 
-let overlayMenuList = document.querySelectorAll('.overlay-menu-list > li');
-overlayMenuList.forEach(function (buttonPC, indexPC) {
-  buttonPC.addEventListener("click", function (e) {
-    let preventLoad = this.querySelector('a').getAttribute('href');
-    console.log(preventLoad);
-    if(preventLoad === '#'){
-      e.preventDefault();
-    }
-  });
-});
 
 window.addEventListener("load", () => {
   let headerBg = document.querySelector("header");
