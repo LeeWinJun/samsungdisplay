@@ -97,6 +97,12 @@ $window.scroll(function () {
 
 $window.trigger("scroll");
 
+  $('.overlay-m-menu-list > li').click(function(){
+    console.log($(this));
+    $(this).find('ul').slideDown();
+    $(this).siblings().find('ul').slideUp();
+  })
+
 /* ----- GO TO TOP ----- */
 
 let $btt = $("#go-top");
