@@ -8,6 +8,7 @@ $window.resize(function () {
     if ($window.width() <= 768) {
         toggle.on("click", function () {
             if (toggle.prop("checked")) {
+                overlay.removeClass("active");
                 openMobileMenu.css({
                     opacity: "1",
                     visibility: "visible",
