@@ -9,7 +9,6 @@ $(window).scroll(function () {
   if ($(window).scrollTop() >= 600) {
     $(".about_sm").css({ visibility: "visible" });
   } else {
-    //aboutImg.css({ backgroundAttachment: "scroll" });
     $(".about_sm").css({ visibility: "hidden" });
   }
   if ($(window).scrollTop() >= 870) {
@@ -54,42 +53,11 @@ for (let i = 0; i < closeBtns.length; i++) {
   });
 }
 
-$window.scroll(function () {
-  console.log(offsetTop);
-  console.log($(this).scrollTop());
-  //header color change
-  if ($(this).scrollTop() >= offsetTop) {
-    $(".sub-title").css({ color: "#333" });
-    header.css({ color: "#333" });
-    menuText_1.css({ color: "#333" });
-    menuText_2.css({ color: "#333" });
-    header.css({ background: "#fff" });
-  } else {
-    bannerWhite();
-    header.css({ background: "rgba(174, 174, 174, 0.2)" });
-  }
-});
-$window.scroll(function () {
-  console.log(offsetTop);
-  console.log($(this).scrollTop());
-  //header color change
-  if ($(this).scrollTop() >= offsetTop) {
-    $(".sub-title").css({ color: "#333" });
-    header.css({ color: "#333" });
-    menuText_1.css({ color: "#333" });
-    menuText_2.css({ color: "#333" });
-    header.css({ background: "#fff" });
-  } else {
-    bannerWhite();
-    header.css({ background: "rgba(174, 174, 174, 0.2)" });
-  }
-});
 const buttons = document.querySelectorAll(".overlay-m-menu-list > li");
 
 buttons.forEach(function (button, index) {
   button.addEventListener("click", function (e) {
     e.preventDefault();
-    //let buttonsNum = buttons[i];
 
     this.childNodes[3].classList.toggle("on");
     this.childNodes[1].classList.toggle("rotate");
@@ -99,23 +67,4 @@ buttons.forEach(function (button, index) {
       }
     });
   });
-});
-
-/* ----- header scroll ----- */
-let offsetTop4 = $(".gaeyo").offset().top;
-
-$window.scroll(function () {
-  console.log(offsetTop4);
-  console.log($(this).scrollTop());
-  //header color change
-  if ($(this).scrollTop() >= offsetTop4) {
-    $(".icon-menu div").css({ background: "#333" });
-  } else {
-    $(".sub-title").css({ color: "#fff" });
-    header.css({ color: "#fff" });
-    menuText_1.css({ color: "#fff" });
-    menuText_2.css({ color: "#fff" });
-    $(".icon-menu div").css({ background: "#fff" });
-    header.css({ background: "rgba(174, 174, 174, 0.2)" });
-  }
 });
