@@ -116,6 +116,9 @@ body {
   margin: 0 auto;
   height: 100%;
 }
+.modal_info a{
+  font-weight: 700;
+}
 header {
   position: fixed;
   width: 100vw;
