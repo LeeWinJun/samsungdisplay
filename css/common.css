@@ -413,8 +413,7 @@ header h1 > span {
 }
 .overlay-m-menu-list li > ul {
   background-color: #ededed;
-  height: 0;
-  overflow: hidden;
+  display: none;
 }
 
 .overlay-m-menu-list li > ul.on {
