@@ -11,9 +11,11 @@ var event2 = new Event("resize");
 window.addEventListener("resize", () => {
   if (window.matchMedia("(max-width: 768px)").matches) {
     toggle.addEventListener("click", () => {
+      overlay.classList.remove("active");
       if (toggle.checked) {
         openMobileMenu.style.opacity = "1";
         openMobileMenu.style.visibility = "visible";
+        console.log("0");
       } else {
         openMobileMenu.style.opacity = "0";
         openMobileMenu.style.visibility = "hidden";
