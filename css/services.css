@@ -31,7 +31,7 @@ input:focus {
   color: #333;
   font-weight: bold;
 }
-.service_inquire h1 {
+.service_inquire h2 {
   padding: 1.28vw 0;
   text-align: center;
 }
@@ -129,7 +129,7 @@ input[type="checkbox"] {
   gap: 0.78vw;
   box-sizing: border-box;
 }
-.service_title h1 {
+.service_title h2 {
   font-weight: bold;
 }
 .service_title img {
